@@ -1,0 +1,59 @@
+.rating-class {
+    margin-top: .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.rating-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .5em;
+}
+
+.rating-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-name .name {
+    color: var(--text-color-primary, #121E31);
+    font-family: Poppins;
+    font-size: .7em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.rating-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.campaign {
+    color: var(--primary-700, var(--Changes---Main, #BD0304));
+    font-family: Poppins;
+    font-size: .5em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.021px;
+    margin-right: 1.8em;
+}
+
+.location {
+    color: var(--text-color-secondary, #8E8E8E);
+    font-family: Poppins;
+    font-size: .5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.014px;
+}

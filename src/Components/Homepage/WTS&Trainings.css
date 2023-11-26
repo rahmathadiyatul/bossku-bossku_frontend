@@ -1,0 +1,47 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 14px;
+    border: 1px solid var(--old-color-styles-light, #c5bdbd);
+    background: var(--old-color-styles-white, #FFF);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 20px 25px 0px rgba(0, 0, 0, 0.10);
+    padding: 2em 2em;
+    margin-top: 2em;
+}
+
+.comment img {
+    width: 3em;
+}
+
+.par-comment {
+    color: var(--Dark, #363848);
+    text-align: center;
+    max-width: 35em;
+    font-family: sans-serif;
+    font-size: .75em;
+    font-style: normal;
+    margin: 2em 2em;
+}
+
+.wts-name {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.wts-role {
+    color: var(--old-color-styles-secondary-text, #717579);
+    font-family: sans-serif;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.stars img {
+    width: 1em;
+    height: 1em;
+}

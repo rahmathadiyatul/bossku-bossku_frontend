@@ -1,0 +1,126 @@
+.story {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background: var(--old-color-styles-white, #FFF);
+    display: flex;
+    flex-direction: column;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3em 3em 0 5em;
+}
+
+.success-story-1 {
+    color: var(--Changes---Main, #BD0304);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.success-story-2 {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.success-story-3 {
+    display: flex;
+    max-width: 40em;
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.upper .button {
+    width: 260px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--Changes---Main, #BD0304);
+    display: flex;
+    flex-direction: row;
+    border: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-text {
+    color: var(--old-color-styles-white, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    margin: 5em 5em 5em 5em;
+    gap: 5em;
+}
+
+.lower img {
+    max-width: 30em;
+    flex-shrink: 0;
+    border-radius: 14px;
+}
+
+.lower-right {
+    gap: 1.5em;
+}
+
+.lower-right .text-1 {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.lower-right .text-2 {
+    display: flex;
+    max-width: 38em;
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: sans-serif;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.lower-right .text-3 {
+    color: var(--Changes---Main, #BD0304);
+    font-family: Poppins;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.lower-right .text-4 {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.rating-card {
+    height: 3em;
+}

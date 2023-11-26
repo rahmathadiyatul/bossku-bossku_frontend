@@ -1,0 +1,9 @@
+.training-box img {
+    width: 15em;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0px 0px
+}
+
+.training-data {
+    padding: 0 1em 1em 1em;
+}

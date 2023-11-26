@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 98.5vw;
+}
+
+li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #5B4947;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.full-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 105px;
+    height: 105px;
+}
+
+.boss {
+    color: var(--black-white-black, #000);
+    font-family: Poppins;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.sme {
+    color: var(--black-white-black, #000);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_links li a:hover {
+    color: #e10000
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Header-Text {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.09px;
+}
+
+.dropdown {
+    display: flex;
+    padding: 24px 24px;
+    gap: 8px;
+    align-self: stretch;
+    flex-direction: column;
+    position: absolute;
+}
+
+.dropdown li {
+    border-bottom: 1px solid var(--neutral-200, #EEE);
+    background: var(--background-background, #FBFBFB);
+}
+
+.dropdown li:last-child {
+    border-right: none;
+}
+
+.nav_links li:hover .dropdown {
+    display: flex;
+}
+
+li.account Button {
+    display: flex;
+    padding: 1em 1.5em;
+    align-items: center;
+    gap: 13px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-700, #BD0304);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+li.account Button:hover {
+    background: rgb(245, 240, 241);
+    box-shadow: 5px 5px 10px 0px rgba(186, 179, 178, 0.5);
+    border: 1.5px solid var(--primary-700, #BD0304);
+    cursor: pointer;
+}
+
+.person-icon {
+    width: 2em;
+    height: 2em;
+}
+
+.my-account {
+    margin-left: .4em;
+    color: var(--primary-700, var(--Changes---Main, #BD0304));
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.027px;
+}
