@@ -47,7 +47,7 @@
     flex-direction: column;
 }
 
-.boss {
+.logo-text .boss {
     color: var(--black-white-black, #ffffff);
     font-family: Poppins;
     font-size: 29px;
@@ -56,7 +56,7 @@
     line-height: normal;
 }
 
-.sme {
+.logo-text .sme {
     color: var(--black-white-black, #ffffff);
     font-family: Poppins;
     font-size: 12px;
