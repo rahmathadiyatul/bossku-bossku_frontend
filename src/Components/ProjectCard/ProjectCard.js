@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import './ProjectCard.css'
 import RatingClass from './RatingClass'
+import { ShoppingCart } from '@mui/icons-material'
 
 const ProjectCard = () => {
     return (
@@ -26,7 +27,12 @@ const ProjectCard = () => {
                 </Box>
                 <RatingClass></RatingClass>
                 <Box class='project-buttons'>
-                    <Button class='cart-button'></Button>
+                    <Button class='cart-button'>
+                        <ShoppingCart style={{
+                            color: 'white',
+                            height: '.8em'
+                        }}></ShoppingCart>
+                    </Button>
                     <Button class='fund-button'>
                         <Typography class='fund-text'>Fund This Project</Typography>
                     </Button>
