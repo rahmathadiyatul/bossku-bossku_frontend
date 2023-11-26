@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <Box sx={{ margin: '1em 4em 0 4em', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+      <Box sx={{ margin: '1em 4em 2em 4em', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
         <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
           <Typography class='top-header'>Your dreams. Your venture. You are The  Boss.</Typography>
           <Button style={{
@@ -27,7 +27,8 @@ function Header() {
             alignItems: 'center',
             border: 'none',
             color: 'white',
-            padding: '0 2em'
+            padding: '0 2em',
+            gap: '.8em'
 
           }}>
             <ExitToApp></ExitToApp>
