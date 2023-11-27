@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Box, Typography, Button } from '@mui/material'
-import EastIcon from '@mui/icons-material/ArrowForward';
 import SuccessStory from './SuccessStory.js';
 import OurPartners from './OurPartners.js';
 import OurProjects from './OurProjects.js';
@@ -10,6 +9,8 @@ import '@fontsource/montserrat'
 import '@fontsource/inter'
 import Http from '../../Axios/Config.js';
 import './HomeBody.css'
+import FindInvestor from '../Investor-Upgrade/FindInvestor.js';
+import Upgrade from '../Investor-Upgrade/Upgrade.js';
 
 const HomeBody = () => {
     const [classList, setClassList] = useState([])
@@ -50,13 +51,8 @@ const HomeBody = () => {
                     <Typography class='unveil'>Unveiling a New Era</Typography>
                     <Typography class='par'>At Bossku, we embody more than just a brand – we stand as a symbol of empowerment, a driving force that fuels the dreams and aspirations of Small and Medium Enterprises (SMEs) across Indonesia. "Bossku," which translates to "I am the boss," encapsulates the spirit of taking charge, of owning your destiny, and of forging paths to success.</Typography>
                     <Box class='buttons'>
-                        <Button class='button-1'>
-                            <Typography class='investor'>Find Investor</Typography>
-                            <EastIcon sx={{ color: 'white' }} className='east-icon'></EastIcon>
-                        </Button>
-                        <Button class='button-2'>
-                            <Typography class='upgrade'>Upgrade</Typography>
-                        </Button>
+                        <FindInvestor></FindInvestor>
+                        <Upgrade></Upgrade>
                     </Box>
                     <Box>
 

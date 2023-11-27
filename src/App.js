@@ -1,3 +1,5 @@
+
+import React, { createContext, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './2_LandingPage/LandingPage.js';
@@ -6,10 +8,10 @@ import LandingPage from './2_LandingPage/LandingPage.js';
 // import NewPass from './ResetPass-NewPass/NewPass.js';
 // import Login from './Login/Login.js';
 // import SuccessEmail from './SuccesEmail/SuccesEmail.js';
-import React, { createContext, useState } from 'react';
 // import DetailKelas from './DetailKelas/DetailKelas';
 
 export const CartContext = createContext()
+
 function App() {
   const [cart, setCart] = useState([])
   return (
