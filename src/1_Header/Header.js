@@ -5,6 +5,7 @@ import { Button, Dropdown } from '@mui/base';
 import { Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Email, Call, ExitToApp } from '@mui/icons-material';
+import Upgrade from '../Components/Investor-Upgrade/Upgrade';
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -12,6 +13,10 @@ function Header() {
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  const handleOnClick = () => {
+
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -28,9 +33,11 @@ function Header() {
             border: 'none',
             color: 'white',
             padding: '0 2em',
-            gap: '.8em'
-
+            gap: '.8em',
+            cursor: 'pointer',
+            onClick: { handleOnClick }
           }}>
+            <Upgrade hideButton={true}></Upgrade>
             <ExitToApp></ExitToApp>
             <Typography>Sign Up Now</Typography>
           </Button>

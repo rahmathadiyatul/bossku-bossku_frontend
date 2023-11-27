@@ -30,3 +30,16 @@
     font-weight: 700;
     line-height: normal;
 }
+
+.button-upgrade {
+    display: 'flex';
+    flex-direction: 'row';
+    height: '2.5em';
+    border-radius: '8px';
+    background: 'var(--Changes---Main, #BD0304)';
+    align-items: 'center';
+    border: 'none';
+    color: 'white';
+    padding: '0 2em';
+    gap: '.8em'
+}

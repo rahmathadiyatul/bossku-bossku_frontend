@@ -19,7 +19,8 @@ import './../Homepage/HomeBody.css'
 import './../Homepage/WTS&Trainings.css'
 import './InvUpg.css'
 
-export default function Upgrade() {
+export default function Upgrade(props) {
+    const { styleClass, butText, hideButton } = props
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -32,13 +33,18 @@ export default function Upgrade() {
 
     return (
         <Fragment>
-            <Button class='button-2' onClick={handleClickOpen}>
-                <Typography class='upgrade'>Upgrade</Typography>
-            </Button>
+            {
+                hideButton ?
+                    null
+                    :
+                    <Button class='button-2' onClick={handleClickOpen}>
+                        <Typography class={styleClass}>{butText}</Typography>
+                    </Button>
+            }
             <Dialog fullWidth open={open} onClose={handleClose}>
                 <DialogTitle sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <Typography class='wts-name'>Find Investor</Typography>
+                        <Typography class='wts-name'>Upgrade</Typography>
                         <Typography class='wts-role'>Lorem ipsum dolor sit amet</Typography>
                     </Box>
                     <Close sx={{ cursor: 'pointer' }} onClick={handleClose}></Close>
