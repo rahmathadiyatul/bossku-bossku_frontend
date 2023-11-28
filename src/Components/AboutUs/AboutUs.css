@@ -1,0 +1,108 @@
+.main-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main-about img {
+    width: 100vw;
+    flex-shrink: 0;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.dreams {
+    color: var(--old-color-styles-white, #FFF);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: nowrap;
+}
+
+.embark {
+    max-width: 55vw;
+    height: 100vh;
+    padding-top: 3em;
+    padding-left: 3em;
+}
+
+.embark-box {
+    margin-top: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    border-radius: 14px;
+    border: 1px solid var(--old-color-styles-light, #EEE);
+    background: var(--old-color-styles-white, #FFF);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 20px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.embark-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.biswoman {
+    max-height: 75vh;
+    padding-right: 3em;
+}
+
+.founder {
+    background: linear-gradient(180deg, #BD0304 0%, #EA5152 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inlet {
+    width: 90vw;
+    height: 100vh;
+    border-radius: 1em;
+    background: var(--old-color-styles-white, #FFF);
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: row;
+    transform: translate(0, 20%);
+}
+
+.calling {
+    padding-top: 5em;
+    padding-left: 3em;
+    width: 50vw;
+}
+
+.calling img {
+    position: relative;
+    left: -1em;
+    height: 20%;
+}
+
+.why {
+    padding-top: 34vh;
+    padding-bottom: 3vh;
+    padding-left: 5em;
+    padding-right: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pillar {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.pillar-img {
+    width: 3em;
+    height: 3em;
+    margin-right: 1em;
+}

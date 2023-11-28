@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useNavigate } from 'react';
 import './Header.css';
 import PersonIcon from '@mui/icons-material/Person';
 import { Button, Dropdown } from '@mui/base';
@@ -69,7 +69,7 @@ function Header() {
         </div>
         <nav>
           <ul className='nav_links'>
-            <li><Link to='/myclass'>Home</Link></li>
+            <li><Link to='/'>Home</Link></li>
             <li>
               <a href='/#' onClick={toggleDropdown}>
                 Services
@@ -83,7 +83,7 @@ function Header() {
                 )}
               </a>
             </li>
-            <li><Link to='/invoice'>About</Link></li>
+            <li><Link to='/about-us'>About</Link></li>
             <li><Link to='/invoice'>Contact Us</Link></li>
             <li className='account'>
               <Button style={{

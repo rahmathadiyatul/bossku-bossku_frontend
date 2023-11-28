@@ -11,6 +11,7 @@ import Http from '../../Axios/Config.js';
 import './HomeBody.css'
 import FindInvestor from '../Investor-Upgrade/FindInvestor.js';
 import Upgrade from '../Investor-Upgrade/Upgrade.js';
+import Weekly from './Weekly.js';
 
 const HomeBody = () => {
     const [classList, setClassList] = useState([])
@@ -160,15 +161,7 @@ const HomeBody = () => {
                 </Box>
             </Box>
             <Trainings></Trainings>
-            <div className='last'>
-                <Typography class='last-text'>Don’t miss our weekly updates<br></br>about SME’s</Typography>
-                <Box class='subscribe'>
-                    <input className='last-input' placeholder='Enter your email address...'></input>
-                    <Button class='last-button'>
-                        <Typography class='last-button-text'>SUBSCRIBE</Typography>
-                    </Button>
-                </Box>
-            </div>
+            <Weekly></Weekly>
         </div>
 
     )
