@@ -106,3 +106,43 @@
     height: 3em;
     margin-right: 1em;
 }
+
+.future-awaits {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    margin: 10% 0;
+}
+
+.future-awaits img {
+    max-height: 75vh;
+    padding-right: 3em;
+}
+
+.total-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.upper-mission {
+    color: black;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.lower-mission {
+    color: black;
+    text-align: center;
+    font-family: Poppins;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}

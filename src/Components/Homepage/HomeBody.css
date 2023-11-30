@@ -97,6 +97,7 @@
     border-radius: 8px;
     background: var(--Changes---Main, #BD0304);
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
 }
 
 .button-1:hover {

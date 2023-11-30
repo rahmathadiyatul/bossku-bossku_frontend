@@ -3,6 +3,9 @@ import { Box, Typography, Button } from '@mui/material'
 import Header from '../../1_Header/Header'
 import Weekly from '../Homepage/Weekly'
 import Footer from '../../3_Footer/Footer'
+import FindInvestor from '../Investor-Upgrade/FindInvestor'
+import Upgrade from '../Investor-Upgrade/Upgrade'
+import NewsCard from '../News/NewsCards/NewsCard'
 import './AboutUs.css'
 import './../Homepage/SuccessStory.css'
 import './../Homepage/HomeBody.css'
@@ -87,8 +90,65 @@ const AboutUs = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box class='future-awaits'></Box>
-            <Box class='bossku-news'></Box>
+            <Box class='future-awaits'>
+                <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356749/bossku/embark/businessman-offering-hand-shake-2022-02-04-03-19-43-utc-removebg-preview_1_rlakv7.png'></img>
+                <Box>
+                    <Typography class='success-story-1'>- Our Mission</Typography>
+                    <Typography class='success-story-2'>The Future Awaits Your Mark</Typography>
+                    <Typography class='success-story-3'>to ignite the potential within every Small and Medium Enterprise (SME) and empower them to thrive on a global stage. We are committed to being the guiding force that transforms challenges into opportunities, enabling SMEs to conquer new horizons and realize their fullest potential</Typography>
+                    <Box style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingRight: '10%' }}>
+                        <Box class='total-mission'>
+                            <Typography class='upper-mission'>4,556</Typography>
+                            <Typography class='lower-mission'>Total SME</Typography>
+                        </Box>
+                        <Box class='total-mission'>
+                            <Typography class='upper-mission'>874</Typography>
+                            <Typography class='lower-mission'>Projects</Typography>
+                        </Box>
+                        <Box class='total-mission'>
+                            <Typography class='upper-mission'>Rp 195,234,000</Typography>
+                            <Typography class='lower-mission'>Total Funds</Typography>
+                        </Box>
+                    </Box>
+                    <Box class='buttons'>
+                        <FindInvestor></FindInvestor>
+                        <Upgrade styleClass='upgrade' butText='Upgrade'></Upgrade>
+                    </Box>
+                    <Box>
+
+                    </Box>
+                </Box>
+            </Box>
+            <Box sx={{ height: '100vh', gap: '1em', display: 'flex', flexDirection: 'column', paddingBottom: '1em', alignItems: 'center' }}>
+                <Typography class='journey'>Bossku News</Typography>
+                <Typography class='par-2'>Are you ready to forge your legacy? Join us at Bossku, where your journey as a founder is celebrated, supported, and elevated. Let's shape the future, one venture at a time</Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: '2em' }}>
+                    <NewsCard
+                        cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359327/bossku/embark/placeholder_fseomi.jpg'
+                        cardTitle='New vaccine for cattle protects against fetal calf loss from EBA – anatomy of..'
+                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359356/bossku/embark/placeholder_1_a48vxr.jpg'
+                        cardName='Hawkins Junior'
+                        cardStamp='24min read - November 21th, 2020'
+                    ></NewsCard>
+                    <NewsCard
+                        cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356617/bossku/embark/placeholder_nj1ddz.png'
+                        cardTitle='4 Things parents learned for they jids in 2020'
+                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359356/bossku/embark/placeholder_2_r8md2p.png'
+                        cardName='Jean Kapoor'
+                        cardStamp='24min read - November 21th, 2020'
+                    ></NewsCard>
+                    <NewsCard
+                        cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356751/bossku/embark/placeholder_1_qcsnem.png'
+                        cardTitle='He Created the Web. Now He’s Out to Remake the Digital World.'
+                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359355/bossku/embark/placeholder_3_icj8tz.png'
+                        cardName='Melinda Humbles'
+                        cardStamp='24min read - November 21th, 2020'
+                    ></NewsCard>
+                </Box>
+            </Box>
             <Weekly></Weekly>
             <Footer></Footer>
         </div >

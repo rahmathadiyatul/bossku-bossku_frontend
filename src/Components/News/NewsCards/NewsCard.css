@@ -1,0 +1,30 @@
+.news-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 2px solid var(--neutral-200, #EEE);
+    background: var(--black-white-white, #FFF);
+    width: 20em;
+    height: fit-content;
+    flex-shrink: 0;
+    box-shadow: 0px 7px 22px 0px rgba(143, 134, 195, 0.02);
+}
+
+.card-title {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: .5em 1em;
+}
+
+.card-par {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: sans-serif;
+    font-size: .7em;
+    font-style: normal;
+    font-weight: 400;
+    padding: .5em 1em;
+}
