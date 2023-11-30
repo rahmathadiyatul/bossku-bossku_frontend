@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import TokenContextProvider from './Context/TokenContext';
+import TokenContextProvider from './Components/UserPageComponents/TokenContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <TokenContextProvider> */}
+    <TokenContextProvider>
       <App />
-    {/* </TokenContextProvider> */}
+    </TokenContextProvider>
   </React.StrictMode>
 );
 
