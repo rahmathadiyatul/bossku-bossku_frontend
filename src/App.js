@@ -11,6 +11,7 @@ import Register from './Components/Register/Register.js';
 import SuccessEmail from './Components/SuccesEmail/SuccesEmail.js';
 import Projects from './Components/Projects/Projects.js';
 import ContactUs from './Components/ContactUs/ContactUs.js';
+import DetailProject from './Components/Projects/ProjectDetails/ProjectDetails.js'
 
 export const CartContext = createContext()
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
           <Route path="/projects" element={<Projects></Projects>}></Route>
+          <Route path="/project-detail" element={<DetailProject></DetailProject>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="/successemail" element={<SuccessEmail></SuccessEmail>}></Route>
           <Route path="/resetpassword/newpass" element={<NewPass></NewPass>}></Route>

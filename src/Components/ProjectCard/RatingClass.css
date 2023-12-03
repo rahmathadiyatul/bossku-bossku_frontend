@@ -57,3 +57,14 @@
     line-height: 140%;
     letter-spacing: -0.014px;
 }
+
+.account-icon {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.account-icon img {
+    padding-top: 1em;
+    width: 3em;
+}

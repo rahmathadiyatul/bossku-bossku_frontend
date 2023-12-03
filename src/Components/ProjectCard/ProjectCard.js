@@ -4,10 +4,11 @@ import './ProjectCard.css'
 import RatingClass from './RatingClass'
 import { ShoppingCart } from '@mui/icons-material'
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+    const { cover, category, title, accountName, location } = props
     return (
         <div className='project'>
-            <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700929257/bossku/placeholder_x31gbm.jpg'></img>
+            <img src={cover}></img>
             <Box class='contents'>
                 <Typography sx={{
                     color: 'var(--primary-700, var(--Changes---Main, #BD0304))',
@@ -18,14 +19,17 @@ const ProjectCard = () => {
                     lineHeight: '120%',
                     letterSpacing: '0.027px'
                 }}
-                >MEDICAL</Typography>
-                <Typography class='title'>Beautiful color for designers & students</Typography>
+                >{category}</Typography>
+                <Typography class='title'>{title}</Typography>
                 <img style={{ width: '100%' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700929702/bossku/progressBar_q1aedt.png'></img>
                 <Box class='qty'>
                     <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700930115/bossku/ProjectCard/stacks-of-coins_1_ih7fym.svg'></img>
-                    <Typography class='total'>Total Product: 400</Typography>
+                    <Typography class='total'>Production Capacity:<br></br> -ton/month</Typography>
                 </Box>
-                <RatingClass></RatingClass>
+                <RatingClass
+                    name={accountName}
+                    location={location}
+                ></RatingClass>
                 <Box class='project-buttons'>
                     <Button class='cart-button'>
                         <ShoppingCart style={{
