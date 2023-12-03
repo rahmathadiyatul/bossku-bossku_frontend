@@ -7,20 +7,17 @@ import { Link } from 'react-router-dom';
 import { Email, Call, ExitToApp } from '@mui/icons-material';
 import Upgrade from '../Components/Investor-Upgrade/Upgrade';
 
-function Header() {
+function Header(props) {
+  const { contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const handleOnClick = () => {
-
-  }
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <Box sx={{ margin: '1em 4em 2em 4em', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+    <div className={headAll}>
+      <Box class={upperHead}>
         <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
           <Typography class='top-header'>Your dreams. Your venture. You are The  Boss.</Typography>
           <Button style={{
@@ -35,25 +32,36 @@ function Header() {
             padding: '0 2em',
             gap: '.8em',
             cursor: 'pointer',
-            onClick: { handleOnClick }
-          }}>
-            <Upgrade hideButton={true}></Upgrade>
-            <ExitToApp></ExitToApp>
-            <Typography>Sign Up Now</Typography>
+          }}
+          >
+            <Link style={{
+              display: 'flex',
+              flexDirection: 'row',
+              height: '2.5em',
+              alignItems: 'center',
+              color: 'white',
+              textDecoration: 'none',
+              gap: '.8em',
+            }}
+              to='/register'>
+              <Upgrade hideButton={true}></Upgrade>
+              <ExitToApp></ExitToApp>
+              <Typography>Sign Up Now</Typography>
+            </Link>
           </Button>
         </Box>
-        <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', color: '#BD0304', fontFamily: 'sans-serif', alignItems: 'center' }}>
+        <Box class={contacts}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', fontFamily: 'sans-serif', alignItems: 'center' }}>
             <Call sx={{ height: '.7em' }}></Call>
             <Typography sx={{ fontSize: '.8em' }} class='top-texts'>394-091-3312</Typography>
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', color: '#BD0304', fontFamily: 'sans-serif', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', fontFamily: 'sans-serif', alignItems: 'center' }}>
             <Email sx={{ height: '.7em' }}></Email>
             <Typography sx={{ fontSize: '.8em' }} class='top-texts'>help@bossku.id</Typography>
           </Box>
         </Box>
       </Box>
-      <header>
+      <header className={lowerHead}>
         <div className='full-logo'>
           <Link to='/'>
             <img
@@ -62,30 +70,31 @@ function Header() {
               alt="logo"
             />
           </Link>
-          <div className='logo-text'>
+          <div className={logoText}>
             <h1 className="bosses">BOSSKU</h1>
             <Typography class='smes'>SME’s Capitalization</Typography>
           </div>
         </div>
-        <nav>
+        <nav className={navs}>
           <ul className='nav_links'>
             <li><Link to='/'>Home</Link></li>
             <li>
               <a href='/#' onClick={toggleDropdown}>
                 Services
                 {isDropdownOpen && (
-                  <ul className='dropdown'>
-                    <li><Link class='dropdown-items' to='/service1'>Service 1</Link></li>
-                    <li><Link to='/service2'>Service 2</Link></li>
-                    <li><Link to='/service3'>Service 3</Link></li>
-                    <li><Link to='/service4'>Service 4</Link></li>
+                  <ul style={{ backgroundColor: 'white', marginTop: '2em' }} className='dropdown'>
+                    <li><Link class='dropdown-items' to='/projects'>Funding</Link></li>
+                    <li><Link class='dropdown-items' to='/projects'>Fund Submission</Link></li>
+                    <li><Link class='dropdown-items' to='/projects'>Buy Product</Link></li>
+                    <li><Link class='dropdown-items' to='/projects'>Sell Product</Link></li>
+                    <li><Link class='dropdown-items' to='/projects'>Training</Link></li>
                   </ul>
                 )}
               </a>
             </li>
             <li><Link to='/about-us'>About</Link></li>
-            <li><Link to='/invoice'>Contact Us</Link></li>
-            <li className='account'>
+            <li><Link to='/contact-us'>Contact Us</Link></li>
+            <li className={account}>
               <Button style={{
                 display: 'flex',
                 flexDirection: 'row',

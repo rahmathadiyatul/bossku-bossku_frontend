@@ -9,6 +9,8 @@ import NewPass from './Components/ResetPass-NewPass/NewPass.js';
 import Login from './Components/Login/Login.js';
 import Register from './Components/Register/Register.js';
 import SuccessEmail from './Components/SuccesEmail/SuccesEmail.js';
+import Projects from './Components/Projects/Projects.js';
+import ContactUs from './Components/ContactUs/ContactUs.js';
 
 export const CartContext = createContext()
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="/home" element={<LandingPage></LandingPage>}></Route>
           <Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
+          <Route path="/projects" element={<Projects></Projects>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="/successemail" element={<SuccessEmail></SuccessEmail>}></Route>
           <Route path="/resetpassword/newpass" element={<NewPass></NewPass>}></Route>
