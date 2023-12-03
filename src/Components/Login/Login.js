@@ -78,7 +78,7 @@ const Login = () => {
                 <SingleButton onClick={() => handleSubmit()} type='submit' orangeButton={'Login'}></SingleButton>
                 <div className='card4'>
                     <p>Don't have account? <a style={{
-                        textDecoration: 'none'
+                        textDecoration: 'none', marginLeft: '.5em'
                     }} href='/register'>Sign Up here</a></p>
                 </div>
             </div>

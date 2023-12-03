@@ -112,7 +112,7 @@ function Header(props) {
                   flexDirection: 'row',
                   alignItems: 'center',
                   justifyContent: 'center',
-                }} to='/invoice'>
+                }} to='/home'>
                   <PersonIcon sx={{ color: '#BD0304', height: '1em' }} className='person-icon'></PersonIcon>
                   <Typography class='my-account'>My Account</Typography>
                 </Link>
