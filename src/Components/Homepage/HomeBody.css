@@ -471,3 +471,9 @@
     font-weight: normal;
     line-height: normal;
 }
+
+@media only screen and (max-width: 768px) {
+    .main {
+        display: none;
+    }
+}

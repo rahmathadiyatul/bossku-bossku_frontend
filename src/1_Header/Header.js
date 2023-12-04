@@ -4,7 +4,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import { Button, Dropdown } from '@mui/base';
 import { Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { Email, Call, ExitToApp } from '@mui/icons-material';
+import { Email, Call, ExitToApp, Menu } from '@mui/icons-material';
 import Upgrade from '../Components/Investor-Upgrade/Upgrade';
 
 function Header(props) {
@@ -14,6 +14,10 @@ function Header(props) {
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  const handleMenuClick = () => {
+    return <h1>asdasdasdasds</h1>
+  }
 
   return (
     <div className={headAll}>
@@ -51,11 +55,11 @@ function Header(props) {
           </Button>
         </Box>
         <Box class={contacts}>
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', fontFamily: 'sans-serif', alignItems: 'center' }}>
+          <Box class='contact'>
             <Call sx={{ height: '.7em' }}></Call>
             <Typography sx={{ fontSize: '.8em' }} class='top-texts'>394-091-3312</Typography>
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '.3em', fontFamily: 'sans-serif', alignItems: 'center' }}>
+          <Box class='contact'>
             <Email sx={{ height: '.7em' }}></Email>
             <Typography sx={{ fontSize: '.8em' }} class='top-texts'>help@bossku.id</Typography>
           </Box>
@@ -76,6 +80,9 @@ function Header(props) {
           </div>
         </div>
         <nav className={navs}>
+          <Box class='menu' onClick={handleMenuClick}>
+            <Menu sx={{ height: 'max-content', width: 'max-content' }}></Menu>
+          </Box>
           <ul className='nav_links'>
             <li><Link to='/'>Home</Link></li>
             <li>

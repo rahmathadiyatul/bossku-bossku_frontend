@@ -5,7 +5,6 @@ import Header from '../../1_Header/Header'
 import OurPartners from '../Homepage/OurPartners'
 import Weekly from '../Homepage/Weekly'
 import Footer from '../../3_Footer/Footer'
-import { Link } from 'react-router-dom';
 import './Projects.css'
 import ProjectCard from '../ProjectCard/ProjectCard';
 
