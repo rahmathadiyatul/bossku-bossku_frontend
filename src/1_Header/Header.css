@@ -226,6 +226,7 @@ li.account2 Button:hover {
 
 .menu {
     display: none;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -240,6 +241,8 @@ li.account2 Button:hover {
         color: #BD0304;
         width: 15vw;
         height: 4vh;
+        text-decoration: none;
+        cursor: pointer;
     }
 
     .head-all {
@@ -247,6 +250,7 @@ li.account2 Button:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 2%;
     }
 
     .upper-head {

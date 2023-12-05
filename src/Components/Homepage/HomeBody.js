@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import SuccessStory from './SuccessStory.js';
+import FindInvestor from '../Investor-Upgrade/FindInvestor.js';
 import OurPartners from './OurPartners.js';
 import OurProjects from './OurProjects.js';
 import WhatTheySay from './WhatTheySay.js';
 import Trainings from './Trainings.js';
-import '@fontsource/montserrat'
-import '@fontsource/inter'
-import Http from '../../Axios/Config.js';
-import './HomeBody.css'
-import FindInvestor from '../Investor-Upgrade/FindInvestor.js';
 import Upgrade from '../Investor-Upgrade/Upgrade.js';
 import Weekly from './Weekly.js';
+import Http from '../../Axios/Config.js';
+import './HomeBody.css'
+import '@fontsource/montserrat'
+import '@fontsource/inter'
 
 const HomeBody = () => {
     const [classList, setClassList] = useState([])
@@ -54,9 +54,6 @@ const HomeBody = () => {
                     <Box class='buttons'>
                         <FindInvestor></FindInvestor>
                         <Upgrade styleClass='upgrade' butText='Upgrade'></Upgrade>
-                    </Box>
-                    <Box>
-
                     </Box>
                 </Box>
                 <Box class='main-right'>

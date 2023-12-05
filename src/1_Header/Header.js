@@ -10,14 +10,16 @@ import Upgrade from '../Components/Investor-Upgrade/Upgrade';
 function Header(props) {
   const { contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [openNavbar, setOpenNavbar] = useState(false);
+
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const handleMenuClick = () => {
-    return <h1>asdasdasdasds</h1>
-  }
+  const toggleNavbar = () => {
+    setOpenNavbar(!openNavbar);
+  };
 
   return (
     <div className={headAll}>
@@ -80,13 +82,21 @@ function Header(props) {
           </div>
         </div>
         <nav className={navs}>
-          <Box class='menu' onClick={handleMenuClick}>
+          <Box class='menu' onClick={toggleNavbar}>
             <Menu sx={{ height: 'max-content', width: 'max-content' }}></Menu>
+            {openNavbar && (
+              <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em' }} className='dropdown'>
+                <li><Link class='dropdown-items' to='/'>Home</Link></li>
+                <li><Link class='dropdown-items' to='/projects'>Services</Link></li>
+                <li><Link class='dropdown-items' to='/about-us'>About Us</Link></li>
+                <li><Link class='dropdown-items' to='/contact-us'>Contact Us</Link></li>
+              </ul>
+            )}
           </Box>
           <ul className='nav_links'>
             <li><Link to='/'>Home</Link></li>
             <li>
-              <a href='/#' onClick={toggleDropdown}>
+              <a onClick={toggleDropdown}>
                 Services
                 {isDropdownOpen && (
                   <ul style={{ backgroundColor: 'white', marginTop: '2em' }} className='dropdown'>
