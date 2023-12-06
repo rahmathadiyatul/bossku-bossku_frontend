@@ -34,7 +34,7 @@ const ProjectCard = (props) => {
                     <Button class='cart-button'>
                         <ShoppingCart style={{
                             color: 'white',
-                            height: '.8em'
+                            height: '.7em'
                         }}></ShoppingCart>
                     </Button>
                     <Button class='fund-button'>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background: var(--old-color-styles-primary-text, #121E31);
+    font-size: 15px;
 }
 
 .main-footer {
@@ -25,7 +26,7 @@
     color: var(--old-color-styles-white, #FFF);
     text-align: center;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -37,8 +38,8 @@
 }
 
 .logo {
-    width: 105px;
-    height: 105px;
+    width: 7em;
+    height: 7em;
     margin-left: -1em;
 }
 
@@ -50,7 +51,7 @@
 .logo-text .boss {
     color: var(--black-white-black, #ffffff);
     font-family: Poppins;
-    font-size: 29px;
+    font-size: 2em;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
@@ -59,7 +60,7 @@
 .logo-text .sme {
     color: var(--black-white-black, #ffffff);
     font-family: Poppins;
-    font-size: 12px;
+    font-size: .8em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -126,7 +127,7 @@
     font-size: .8em;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 2em;
 }
 
 .footer-3 {
@@ -144,7 +145,35 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .footer {
+    .footer-1 {
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .footer-2 {
         display: none;
+    }
+
+    .footer-3 {
+        display: none;
+    }
+
+    .footer-par {
+        display: none;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        padding: 0 25%;
+        margin: 1em 0;
+    }
+
+    .media-icons {
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .copyright {
+        margin-bottom: 20em;
     }
 }

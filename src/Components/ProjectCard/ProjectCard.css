@@ -1,7 +1,8 @@
 .project {
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    font-size: 15px;
+    border-radius: .8em;
     border: 2px solid var(--neutral-200, #EEE);
     background: var(--black-white-white, #FFF);
     width: 15em;
@@ -54,11 +55,11 @@
     border: none;
     display: flex;
     width: 4.5em;
-    padding: 10px 12px;
+    padding: .66em .8em;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    border-radius: 8px;
+    gap: 1.06em;
+    border-radius: .5em;
     background: var(--primary-700, #BD0304);
     height: 2.3em;
 }
@@ -69,9 +70,9 @@
     padding: .5em 1em;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 1.06em;
     flex: 1 0 0;
-    border-radius: 8px;
+    border-radius: .5em;
     background: var(--secondary-700, #1B8271);
     height: 2.3em;
 }
@@ -82,4 +83,23 @@
     font-size: .8em;
     font-style: normal;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    .project {
+        font-size: 8px;
+    }
+
+    .fund-button {
+        padding: 0 .5em;
+        flex-wrap: wrap;
+    }
+
+    .fund-text {
+        font-size: .4em;
+    }
+
+    .cart-button {
+        width: 3.55em;
+    }
 }

@@ -6,7 +6,7 @@ import './WTS&Trainings.css'
 
 const WhatTheySay = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', paddingTop: '1.5em' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', padding: '1.5em 5em', marginTop: '5em' }}>
             <Typography class='journey'>What they say</Typography>
             <Typography class='success-story-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Typography>
             <Box class='comment'>

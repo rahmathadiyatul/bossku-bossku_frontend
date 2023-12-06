@@ -45,3 +45,25 @@
     width: 1em;
     height: 1em;
 }
+
+.trainings {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em
+}
+
+.training-1 {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .trainings {
+        display: none;
+        height: 5em;
+    }
+
+    .training-1 {
+        margin-top: 2em;
+        display: block;
+    }
+}

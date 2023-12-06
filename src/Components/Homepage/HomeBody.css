@@ -356,7 +356,7 @@
     color: var(--White, #FFF);
     text-align: center;
     font-family: Poppins;
-    font-size: 40px;
+    font-size: 2.5em;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -371,7 +371,7 @@
 
 .last-input {
     padding-left: 1em;
-    width: 392px;
+    width: 26em;
     height: 3.35em;
     flex-shrink: 0;
     border-radius: 8px;
@@ -379,7 +379,7 @@
     background-color: transparent;
     color: var(--old-color-styles-white, #FFF);
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -395,7 +395,7 @@
 }
 
 .last-button {
-    width: 221px;
+    width: 14.6em;
     height: 4em;
     flex-shrink: 0;
     border-radius: 8px;
@@ -415,21 +415,21 @@
     color: var(--Changes---Main, #BD0304);
     text-align: center;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.3em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
 .SuccessStory {
-    margin-top: 20px;
+    margin-top: 1.33em;
 }
 
 .partners-text {
     color: var(--old-color-styles-primary-text, #121E31);
     text-align: center;
     font-family: Poppins;
-    font-size: 1.5em;
+    font-size: 2em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -478,6 +478,13 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
+}
+
+.partners-icons {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -554,5 +561,26 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+    }
+
+    .partners-icons {
+        margin-top: 1em;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .inner-box {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .last-input {
+        width: 20em;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
     }
 }

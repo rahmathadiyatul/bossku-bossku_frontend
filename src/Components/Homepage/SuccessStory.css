@@ -1,10 +1,13 @@
 .story {
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     flex-shrink: 0;
     background: var(--old-color-styles-white, #FFF);
     display: flex;
     flex-direction: column;
+    font-size: 15px;
+    margin-top: 1em;
+    justify-content: center;
 }
 
 .upper {
@@ -18,7 +21,7 @@
 .success-story-1 {
     color: var(--Changes---Main, #BD0304);
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 1.33em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -38,29 +41,30 @@
     max-width: 40em;
     color: var(--old-color-styles-primary-text, #121E31);
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 1.06em;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 2em;
 }
 
 .upper .button {
-    width: 260px;
-    height: 58px;
+    width: 18em;
+    height: 4em;
     flex-shrink: 0;
-    border-radius: 8px;
+    border-radius: .5em;
     background: var(--Changes---Main, #BD0304);
     display: flex;
     flex-direction: row;
     border: none;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding-left: .8em;
 }
 
 .button-text {
     color: var(--old-color-styles-white, #FFF);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.25em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -69,14 +73,14 @@
 .lower {
     display: flex;
     flex-direction: row;
-    margin: 5em 5em 5em 5em;
+    margin: 2em 5em 5em 5em;
     gap: 5em;
 }
 
 .lower img {
     max-width: 30em;
     flex-shrink: 0;
-    border-radius: 14px;
+    border-radius: 1em;
 }
 
 .lower-right {
@@ -115,7 +119,7 @@
 .text-4 {
     color: var(--old-color-styles-primary-text, #121E31);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.25em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -123,4 +127,35 @@
 
 .rating-card {
     height: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+    .story {
+        font-size: 10px;
+    }
+
+    .upper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5em;
+    }
+
+    .upper .button {
+        width: 10em;
+        height: 3em;
+    }
+
+    .lower {
+        flex-direction: column;
+        gap: 1em;
+        margin: 2em 5em 0 5em;
+    }
+
+    .lower img {
+        width: 15em;
+    }
+
+    .success-story-3 {
+        text-align: center;
+    }
 }

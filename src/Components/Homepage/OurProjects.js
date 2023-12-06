@@ -5,10 +5,10 @@ import ProjectCard from '../ProjectCard/ProjectCard'
 
 const OurProjects = () => {
     return (
-        <div style={{ height: '100vh', gap: '2em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ height: 'max-content', gap: '2em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Typography class='journey'>Our Projects</Typography>
             <Typography class='par-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: '2em' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: '1em' }}>
                 <ProjectCard
                     category='FARM'
                     cover='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701617107/bossku/ProjectCard/placeholder_msrwm3.png'
