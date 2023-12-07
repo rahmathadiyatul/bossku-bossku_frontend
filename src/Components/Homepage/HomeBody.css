@@ -511,10 +511,15 @@
         font-size: 8px;
     }
 
+    .par{
+        width: 100%;
+    }
     .buttons {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding-top: 2em;
+        margin-bottom: 2em;
     }
     .button-1 {
         font-size: 10px;
@@ -541,7 +546,8 @@
     .cat-icons {
         justify-content: center;
         flex-wrap: wrap;
-        padding: 1em 10em;
+        padding: 1em 20%;
+        margin-bottom: 2em;
     }
 
     .cats {
@@ -592,5 +598,8 @@
     .subscribe {
         flex-direction: column;
         align-items: center;
+    }
+    .last-card{
+        display: none;
     }
 }
