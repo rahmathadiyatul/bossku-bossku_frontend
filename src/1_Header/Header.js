@@ -83,7 +83,7 @@ function Header(props) {
         </div>
         <nav className={navs}>
           <Box class='menu' onClick={toggleNavbar}>
-            <Menu sx={{ height: 'max-content', width: 'max-content' }}></Menu>
+            <Menu sx={{ height: '2em', width: '2em' }}></Menu>
             {openNavbar && (
               <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em' }} className='dropdown'>
                 <li><Link class='dropdown-items' to='/'>Home</Link></li>

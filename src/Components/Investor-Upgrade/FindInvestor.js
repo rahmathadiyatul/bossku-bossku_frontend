@@ -34,7 +34,7 @@ export default function FindInvestor() {
         <Fragment>
             <Button class='button-1' onClick={handleClickOpen}>
                 <Typography class='investor'>Find Investor</Typography>
-                <East sx={{ color: 'white' }} className='east-icon'></East>
+                <East></East>
             </Button>
             <Dialog fullWidth open={open} onClose={handleClose}>
                 <DialogTitle sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
