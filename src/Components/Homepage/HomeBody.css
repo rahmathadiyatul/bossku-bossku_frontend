@@ -653,6 +653,7 @@
     }
 
     .last{
+        padding-top: 2em;
         font-size: 10px;
         height: max-content;
     }
