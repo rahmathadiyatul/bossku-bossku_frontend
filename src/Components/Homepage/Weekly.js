@@ -5,7 +5,7 @@ import './HomeBody.css'
 const Weekly = () => {
     return (
         <div className='last'>
-            <Typography class='last-text'>Don’t miss our weekly updates<br></br>about SME’s</Typography>
+            <Typography class='last-text'>Don’t miss our weekly updates about SME’s</Typography>
             <Box class='subscribe'>
                 <input className='last-input' placeholder='Enter your email address...'></input>
                 <Button class='last-button'>

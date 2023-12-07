@@ -48,7 +48,7 @@ const HomeBody = () => {
             <div className='main-page'>
                 <Box class='main-left'>
                     <Typography class='empower'>- Empowering SMEs to Conquer New Horizons</Typography>
-                    <Typography class='welcome'>Welcome to Bossku:</Typography>
+                    <Typography class='welcome'>Welcome to Bossku</Typography>
                     <Typography class='unveil'>Unveiling a New Era</Typography>
                     <Typography class='par'>At Bossku, we embody more than just a brand – we stand as a symbol of empowerment, a driving force that fuels the dreams and aspirations of Small and Medium Enterprises (SMEs) across Indonesia. "Bossku," which translates to "I am the boss," encapsulates the spirit of taking charge, of owning your destiny, and of forging paths to success.</Typography>
                     <Box class='buttons'>

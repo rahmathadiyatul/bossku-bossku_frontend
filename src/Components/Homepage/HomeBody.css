@@ -180,6 +180,15 @@
     font-weight: 700;
     line-height: normal;
 }
+.our-project{
+    height:max-content; 
+    gap:2em; 
+    display:flex; 
+    flex-direction:column;
+    justify-content:center; 
+    align-items:center;
+    font-size: 15px;
+}
 
 .journey {
     color: var(--old-color-styles-primary-text, #121E31);
@@ -343,6 +352,7 @@
 }
 
 .last {
+    font-size: 15px;
     margin-top: 0;
     padding: 10em 0;
     height: 45vh;
@@ -362,6 +372,14 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.what-they{
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    height:100vh; 
+    padding:1.5em 5em; margin-top:5em;
 }
 
 .subscribe {
@@ -488,6 +506,15 @@
     flex-direction: row;
     gap: 3em;
 }
+.trains{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 7em 7em;
+}
 
 @media only screen and (max-width: 768px) {
     .main-right {
@@ -530,7 +557,7 @@
         font-size: 10px;
     }
     .par-2 {
-        padding: 0 10%;
+        padding: 0 20%;
     }
 
     .categories {
@@ -567,6 +594,12 @@
 
     .member {
         font-size: 10px;
+        height: max-content;
+        padding-bottom: 2em;
+    }
+    
+    .our-project{
+        font-size: 10px;
     }
 
     .par-3 {
@@ -599,7 +632,28 @@
         flex-direction: column;
         align-items: center;
     }
+
     .last-card{
         display: none;
+    }
+
+    .what-they{
+        font-size: 10px;
+        height: max-content;
+        margin-bottom: 5em;
+    }
+
+    .totals {
+        height: 40vh;
+    }
+
+    .trains{
+        font-size: 10px;
+        padding: 15%;
+    }
+
+    .last{
+        font-size: 10px;
+        height: max-content;
     }
 }

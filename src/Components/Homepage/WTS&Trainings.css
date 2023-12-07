@@ -65,5 +65,6 @@
     .training-1 {
         margin-top: 2em;
         display: block;
+        max-width: fit-content;
     }
 }
