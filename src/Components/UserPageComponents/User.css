@@ -19,7 +19,7 @@
 }
 
 .card3 {
-    margin: 340px 27%;
+    margin: 340px 24%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -42,4 +42,14 @@
 
 .suc {
     pointer-events: none
+}
+
+@media only screen and (max-width: 768px) {
+    .card{
+        width: 100vw;
+        padding: 0 2em;
+        left: 0;
+        margin: -1.5em 0;
+        height: 10vh;
+    }
 }

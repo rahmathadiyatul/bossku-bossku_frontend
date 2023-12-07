@@ -19,7 +19,10 @@ const InputU = styled(Input)({
     '&:active': {
         border: 'none',
         boxShadow: '0 0 0 0.2rem rgba(150,150,150,.75)',
-    }
+    },
+    '@media (max-width: 768px)': {
+        width: '150%',
+      },
 });
 
 export default function InputUser(props) {
