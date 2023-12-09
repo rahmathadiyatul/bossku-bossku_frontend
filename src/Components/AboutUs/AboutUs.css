@@ -1,3 +1,12 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    font-size: 15px;
+}
+
 .main-about {
     display: flex;
     flex-direction: column;
@@ -37,7 +46,7 @@
     padding: 1em;
     display: flex;
     flex-direction: row;
-    border-radius: 14px;
+    border-radius: 1em;
     border: 1px solid var(--old-color-styles-light, #EEE);
     background: var(--old-color-styles-white, #FFF);
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 20px 25px 0px rgba(0, 0, 0, 0.05);
@@ -145,4 +154,78 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
+}
+
+.inletImg {
+    display: none;
+}
+
+.text-3 {
+    display: flex;
+    max-width: 38em;
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: sans-serif;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us {
+        font-size: 8px;
+    }
+
+    .embark {
+        max-width: 100vw;
+        padding: 3em 3em;
+        height: fit-content;
+    }
+
+    .embark-box {
+        max-height: 7.5em;
+    }
+
+    .biswoman {
+        display: none;
+    }
+
+    .inlet {
+        height: fit-content;
+        align-items: center;
+    }
+
+    .inlet img {
+        position: relative;
+        left: -1em;
+        height: 20em;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1), 0px 20px 25px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .calling {
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    .calling img {
+        height: 5em;
+        left: 30%;
+        box-shadow: none;
+    }
+
+    .signee {
+        margin-bottom: 1em;
+    }
+
+    .why {
+        padding-top: 14vh;
+    }
+
+    .text-3 {
+        display: none;
+    }
+
+    .future-awaits {
+        display: none;
+    }
 }

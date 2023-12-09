@@ -12,12 +12,12 @@ import './../Homepage/HomeBody.css'
 
 const AboutUs = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', margin: '0', padding: '0', maxHeight: '100vh' }}>
+        <div className='about-us'>
             <Header></Header>
             <Box class='main-about'>
                 <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701180612/bossku/main-about_uuqmia.jpg'></img>
                 <Typography class='dreams'>Your Dreams, Our Canvas</Typography>
-                <Typography sx={{ fontWeight: '700', color: 'white', position: 'absolute', top: '65%', left: '50%', transform: 'translate(-50%, -50%)' }}>Home / About</Typography>
+                <Typography sx={{ fontWeight: '700', color: 'white', position: 'absolute', top: '65%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '1em' }}>Home / About</Typography>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', margin: '0 0', padding: '0 0' }}>
                 <Box class='embark'>
@@ -49,7 +49,7 @@ const AboutUs = () => {
                         <Typography class='success-story-3'>Dear Visionaries, Mavericks, and Dream Chasers,<br></br><br></br>
                             Are you ready to redefine what's possible? At Bossku, we're not just shaping the future – we're inviting you to be the architects of your own success stories. You're not just a founder; you're a trailblazer, and we're here to light up the path ahead.</Typography>
                         <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701183575/bossku/embark/d-signature-letter-logo-design-concept-vector-31859951_1_ojreuw.jpg'></img>
-                        <Typography>Dadang Firmansyah <br></br>Founder of Bossku</Typography>
+                        <Typography class='signee'>Dadang Firmansyah <br></br>Founder of Bossku</Typography>
                     </Box>
                 </Box>
             </div>
@@ -62,14 +62,14 @@ const AboutUs = () => {
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185316/bossku/embark/vr-glasses_1_mypha8.svg'></img>
                         <Box class='embark-text'>
                             <Typography class='text-1'>Elevate Your Vision</Typography>
-                            <Typography class='text-2'>Your vision is the North Star guiding your every move. Bossku elevates that vision by offering insights, data-driven strategies, and a global perspective that propels you towards exponential growth.</Typography>
+                            <Typography class='text-3'>Your vision is the North Star guiding your every move. Bossku elevates that vision by offering insights, data-driven strategies, and a global perspective that propels you towards exponential growth.</Typography>
                         </Box>
                     </Box>
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185316/bossku/embark/transformation_1_f2jur6.svg'></img>
                         <Box class='embark-text'>
                             <Typography class='text-1'>Unwavering Support</Typography>
-                            <Typography class='text-2'>With Bossku, you're not alone on this journey. We stand beside you, providing the guidance, mentorship, and unwavering support that turns challenges into triumphs</Typography>
+                            <Typography class='text-3'>With Bossku, you're not alone on this journey. We stand beside you, providing the guidance, mentorship, and unwavering support that turns challenges into triumphs</Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -78,14 +78,14 @@ const AboutUs = () => {
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185317/bossku/embark/doctor-bag_1_o7wny2.svg'></img>
                         <Box class='embark-text'>
                             <Typography class='text-1'>Foster Connections</Typography>
-                            <Typography class='text-2'>Join a community of fellow founders who understand the exhilaration and the grind. Network, collaborate, and learn from one another – because growth is better when shared</Typography>
+                            <Typography class='text-3'>Join a community of fellow founders who understand the exhilaration and the grind. Network, collaborate, and learn from one another – because growth is better when shared</Typography>
                         </Box>
                     </Box>
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185317/bossku/embark/book_1_1_eovdkr.svg'></img>
                         <Box class='embark-text'>
                             <Typography class='text-1'>Step into Your Power</Typography>
-                            <Typography class='text-2'>The journey ahead is not for the faint of heart. It's for those who dare to dream, dare to act, and dare to own their destiny. It's for you, the fearless founder who's ready to embrace challenges and turn them into opportunities</Typography>
+                            <Typography class='text-3'>The journey ahead is not for the faint of heart. It's for those who dare to dream, dare to act, and dare to own their destiny. It's for you, the fearless founder who's ready to embrace challenges and turn them into opportunities</Typography>
                         </Box>
                     </Box>
                 </Box>
