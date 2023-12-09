@@ -33,7 +33,7 @@ const Projects = () => {
                     <a style={{ gap: '.5em', color: 'black', cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center', fontWeight: 'bolder', textAlign: 'center' }} onClick={toggleDropdown}>
                         All Category <KeyboardArrowDown sx={{ color: '#BD0304' }}></KeyboardArrowDown>
                         {isDropdownOpen && (
-                            <span style={{ backgroundColor: 'white', margin: '2em 2em', padding: '0.5em 1em' }} className='dropdown'>
+                            <span style={{ backgroundColor: 'white', margin: '2em 2em', padding: '0.5em 1em', zIndex: '1' }} className='dropdown'>
                                 <span>Technology</span>
                                 <span>Medical</span>
                                 <span>Business</span>

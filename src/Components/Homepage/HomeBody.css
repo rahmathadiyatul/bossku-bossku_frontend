@@ -180,13 +180,14 @@
     font-weight: 700;
     line-height: normal;
 }
-.our-project{
-    height:max-content; 
-    gap:2em; 
-    display:flex; 
-    flex-direction:column;
-    justify-content:center; 
-    align-items:center;
+
+.our-project {
+    height: max-content;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
 }
 
@@ -374,12 +375,13 @@
     line-height: normal;
 }
 
-.what-they{
-    display:flex; 
-    flex-direction:column; 
-    align-items:center; 
-    height:100vh; 
-    padding:1.5em 5em; margin-top:5em;
+.what-they {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1.5em 5em;
+    margin-top: 5em;
 }
 
 .subscribe {
@@ -506,7 +508,8 @@
     flex-direction: row;
     gap: 3em;
 }
-.trains{
+
+.trains {
     font-size: 15px;
     display: flex;
     flex-direction: column;
@@ -538,9 +541,10 @@
         font-size: 8px;
     }
 
-    .par{
+    .par {
         width: 100%;
     }
+
     .buttons {
         display: flex;
         flex-direction: row;
@@ -548,14 +552,17 @@
         padding-top: 2em;
         margin-bottom: 2em;
     }
+
     .button-1 {
         font-size: 10px;
         color: white;
         gap: .5em;
     }
+
     .button-2 {
         font-size: 10px;
     }
+
     .par-2 {
         padding: 0 20%;
     }
@@ -597,8 +604,8 @@
         height: max-content;
         padding-bottom: 2em;
     }
-    
-    .our-project{
+
+    .our-project {
         font-size: 10px;
     }
 
@@ -627,7 +634,8 @@
     .last-input {
         width: 20em;
     }
-    .last-button{
+
+    .last-button {
         height: 2.5em;
     }
 
@@ -636,11 +644,11 @@
         align-items: center;
     }
 
-    .last-card{
+    .last-card {
         display: none;
     }
 
-    .what-they{
+    .what-they {
         font-size: 10px;
         height: max-content;
         margin-bottom: 5em;
@@ -650,14 +658,21 @@
         height: 40vh;
     }
 
-    .trains{
+    .trains {
         font-size: 10px;
         padding: 15%;
     }
 
-    .last{
+    .last {
         padding-top: 2em;
         font-size: 10px;
+        margin: 0 0;
         height: max-content;
+        justify-content: center;
+    }
+
+    .last-text {
+        text-wrap: wrap;
+        max-width: 80%;
     }
 }

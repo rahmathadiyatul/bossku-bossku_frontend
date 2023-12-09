@@ -132,6 +132,7 @@
 @media only screen and (max-width: 768px) {
     .story {
         font-size: 10px;
+        margin-bottom: 2em;
     }
 
     .upper {
