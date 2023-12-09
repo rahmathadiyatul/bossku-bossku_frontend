@@ -10,14 +10,13 @@ import './../Homepage/HomeBody.css'
 
 const ContactUs = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', fontSize: '15px', gap: '1em ' }}>
             <Header></Header>
-            <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Box class='contact-us-header' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography class='journey'>Contact Us</Typography>
                 <Typography class='par-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
             </Box>
-            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-evenly', marginTop: '5%' }}>
-
+            <Box class='contacts-data'>
                 <Box sx={{ display: 'flex', flexDirection: 'row', gap: '1em' }}>
                     <Box class='icon-style'>
                         <Call></Call>
@@ -36,7 +35,7 @@ const ContactUs = () => {
                         <Typography class='contact-value'>support@akcel.com</Typography>
                     </Box>
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '1em' }}>
+                <Box class='shown-contact'>
                     <Box class='icon-style'>
                         <LocationOn></LocationOn>
                     </Box>
@@ -45,6 +44,16 @@ const ContactUs = () => {
                         <Typography class='contact-value'>832  Thompson Drive, San Fransisco<br></br>
                             CA 94107, United States</Typography>
                     </Box>
+                </Box>
+            </Box>
+            <Box class='hidden-contact'>
+                <Box class='icon-style'>
+                    <LocationOn></LocationOn>
+                </Box>
+                <Box>
+                    <h3 class='contact-head'>Our Address</h3>
+                    <Typography class='contact-value'>832  Thompson Drive, San Fransisco<br></br>
+                        CA 94107, United States</Typography>
                 </Box>
             </Box>
             <Box class='maps'>

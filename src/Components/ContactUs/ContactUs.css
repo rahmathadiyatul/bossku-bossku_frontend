@@ -68,3 +68,57 @@
     transform: scale(1.02);
     cursor: pointer;
 }
+
+.contacts-data {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.shown-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 1em
+}
+
+.hidden-contact {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-us-header {
+        font-size: 8px;
+    }
+
+    .contacts-data {
+        font-size: 8px;
+    }
+
+    .shown-contact {
+        display: none;
+    }
+
+    .hidden-contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+    }
+
+    .maps {
+        height: 55vh;
+    }
+
+    .contact-form {
+        width: 100%;
+        transform: translate(5%, 5%);
+    }
+
+    .button-send2 {
+        margin: 2em;
+    }
+
+}
