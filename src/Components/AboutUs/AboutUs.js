@@ -92,7 +92,7 @@ const AboutUs = () => {
             </Box>
             <Box class='future-awaits'>
                 <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356749/bossku/embark/businessman-offering-hand-shake-2022-02-04-03-19-43-utc-removebg-preview_1_rlakv7.png'></img>
-                <Box>
+                <Box class='successes'>
                     <Typography class='success-story-1'>- Our Mission</Typography>
                     <Typography class='success-story-2'>The Future Awaits Your Mark</Typography>
                     <Typography class='success-story-3'>to ignite the potential within every Small and Medium Enterprise (SME) and empower them to thrive on a global stage. We are committed to being the guiding force that transforms challenges into opportunities, enabling SMEs to conquer new horizons and realize their fullest potential</Typography>
@@ -139,14 +139,16 @@ const AboutUs = () => {
                         cardName='Jean Kapoor'
                         cardStamp='24min read - November 21th, 2020'
                     ></NewsCard>
-                    <NewsCard
-                        cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356751/bossku/embark/placeholder_1_qcsnem.png'
-                        cardTitle='He Created the Web. Now He’s Out to Remake the Digital World.'
-                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359355/bossku/embark/placeholder_3_icj8tz.png'
-                        cardName='Melinda Humbles'
-                        cardStamp='24min read - November 21th, 2020'
-                    ></NewsCard>
+                    <Box class='mobile-news'>
+                        <NewsCard
+                            cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356751/bossku/embark/placeholder_1_qcsnem.png'
+                            cardTitle='He Created the Web. Now He’s Out to Remake the Digital World.'
+                            cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                            cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359355/bossku/embark/placeholder_3_icj8tz.png'
+                            cardName='Melinda Humbles'
+                            cardStamp='24min read - November 21th, 2020'
+                        ></NewsCard>
+                    </Box>
                 </Box>
             </Box>
             <Weekly></Weekly>

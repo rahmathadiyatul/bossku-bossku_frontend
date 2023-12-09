@@ -226,6 +226,21 @@
     }
 
     .future-awaits {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5em;
+    }
+
+    .future-awaits img {
         display: none;
+    }
+
+    .mobile-news {
+        display: none;
+    }
+
+    .successes {
+        padding: auto 2em;
     }
 }
