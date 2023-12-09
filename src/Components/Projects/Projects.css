@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 18px;
 }
 
 .cover img {
@@ -43,6 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
 }
 
 .view-more {
@@ -61,7 +63,7 @@
 .view-text {
     color: var(--old-color-styles-white, #BD0304);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -75,4 +77,121 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.will-hide {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0;
+    padding: 0 0;
+    gap: 3em;
+}
+
+.project-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    justify-content: center;
+    width: 80vw;
+}
+
+.projects-cats {
+    font-size: .7em;
+    margin-top: 2%;
+    border-radius: 3px;
+    background: var(--old-color-styles-primary-light, #F6FBFA);
+    color: #BD0304;
+    width: 30%;
+    font-weight: bolder;
+    border: none;
+}
+
+.projects-cats:hover {
+    color: white;
+    background: #BD0304;
+    box-shadow: 5px 5px 10px 0px rgba(186, 179, 178, 0.5);
+    border: 1.5px solid var(--primary-700, #BD0304);
+    cursor: pointer;
+}
+
+.all-project {
+    padding: 0 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.load-more {
+    margin-top: 2%;
+    border-radius: 8px;
+    background: var(--Changes---Main, #BD0304);
+    color: white;
+    width: 10%;
+    height: 3em;
+    padding: 2em auto;
+    left: 45%;
+    font-weight: bolder;
+    border: none;
+    position: relative;
+}
+
+.load-more:hover {
+    color: #BD0304;
+    background-color: #FFF;
+    box-shadow: 5px 5px 10px 0px rgba(186, 179, 178, 0.5);
+    border: 1.5px solid var(--primary-700, #BD0304);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .cover {
+        font-size: 10px;
+    }
+
+    .will-hide {
+        display: none;
+    }
+
+    .cover-text {
+        color: white;
+        position: absolute;
+        top: 22%;
+        text-wrap: wrap;
+        width: 80%;
+        font-size: 1.5em;
+    }
+
+    .project-search {
+        position: absolute;
+        top: 28.5%;
+    }
+
+    .project-nav {
+        display: none;
+        margin: 0 0;
+    }
+
+    .projects-cats {
+        display: none;
+        margin: 0 0;
+    }
+
+    .all-project {
+        display: none;
+    }
+
+    .project-contents {
+        margin-top: 10%;
+    }
+
+    .load-more {
+        min-width: max-content;
+        margin-top: 2em;
+        padding: 0 2em;
+        left: 35%;
+    }
 }

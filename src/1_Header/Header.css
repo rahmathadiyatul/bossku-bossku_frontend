@@ -16,6 +16,7 @@
 .head-all2 {
     background-color: #BD0304;
     color: white;
+    width: -webkit-fill-available;
 }
 
 .upper-head {
@@ -69,6 +70,7 @@ header {
 }
 
 .logo {
+    padding-top: .7em;
     width: 6em;
     height: 6em;
 }
@@ -250,7 +252,6 @@ li.account2 Button:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 2%;
     }
 
     .upper-head {
@@ -261,6 +262,7 @@ li.account2 Button:hover {
     }
 
     .upper-head2 {
+        margin: 1em 4em 0 4em;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -269,6 +271,20 @@ li.account2 Button:hover {
 
     .lower-head {
         width: 100vw;
+    }
+
+    .lower-head2 .navs2 .menu {
+        color: white;
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    .lower-head2 .navs2 .menu li {
+        color: #BD0304;
+    }
+
+    .lower-head2 .navs2 .menu li .dropdown-items {
+        color: black;
     }
 
     .top-header {
