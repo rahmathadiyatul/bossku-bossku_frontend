@@ -152,6 +152,7 @@ header {
     border-radius: 6px;
     padding: .5em 0;
     border: .01px solid rgb(239, 232, 232);
+    z-index: 1;
 }
 
 .dropdown li {
