@@ -127,14 +127,10 @@
 }
 
 .load-more {
-    margin-top: 2%;
     border-radius: 8px;
     background: var(--Changes---Main, #BD0304);
     color: white;
-    width: 10%;
-    height: 3em;
-    padding: 2em auto;
-    left: 45%;
+    padding: 1em 2em;
     font-weight: bolder;
     border: none;
     position: relative;
@@ -190,10 +186,8 @@
     }
 
     .load-more {
-        min-width: max-content;
-        margin-top: 2em;
-        padding: 0 2em;
-        left: 40%;
-        width: 20%;
+        width: max-content;
+        height: 3em;
+        margin: 2% auto 0 auto;
     }
 }
