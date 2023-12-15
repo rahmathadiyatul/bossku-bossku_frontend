@@ -14,7 +14,7 @@ const ContactUs = () => {
             <Header></Header>
             <Box class='contact-us-header' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography class='journey'>Contact Us</Typography>
-                <Typography class='par-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
+                <Typography class='par-2'>Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
             </Box>
             <Box class='contacts-data'>
                 <Box sx={{ display: 'flex', flexDirection: 'row', gap: '1em' }}>
