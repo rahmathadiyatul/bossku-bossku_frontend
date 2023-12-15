@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies and Build
         run: |
           npm install
-          CI=true npm run build
+          CI=false npm run build
 
       - name: Deploy to Server
         uses: appleboy/scp-action@master
