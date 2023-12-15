@@ -30,4 +30,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: 'build/*'
-          target: '/path/to/public_html/'
+          target: '/public_html/'
