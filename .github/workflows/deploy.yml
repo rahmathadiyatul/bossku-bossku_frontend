@@ -31,3 +31,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: 'build/*'
           target: '/public_html/'
+          debug: true
