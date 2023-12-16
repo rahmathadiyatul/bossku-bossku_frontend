@@ -7,11 +7,11 @@ const OurPartners = () => {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '5em 5em', height: 'max-content' }}>
             <Typography class='partners-text'>Our Partnership</Typography>
             <Box class='partners-icons'>
-                <img style={{ width: '7em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700927212/bossku/partners/Group_7_kynjkx.svg'></img>
-                <img style={{ width: '7em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700927213/bossku/partners/Group_8_mefkfg.svg'></img>
-                <img style={{ width: '7em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700927214/bossku/partners/Group_9_t21ltw.svg'></img>
-                <img style={{ width: '7em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700927213/bossku/partners/Group_13_pijwbe.svg'></img>
-                <img style={{ width: '7em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700927212/bossku/partners/Group_11_irdy9v.svg'></img>
+                <img style={{ width: '10em', height: '4em'}} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704112/bossku/partners/ministry_qj0y0a.jpg'></img>
+                <img style={{ width: '3em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704112/bossku/partners/Seal_of_Tasikmalaya_Regency.svg_cpddef.png'></img>
+                <img style={{ width: '4em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/YlxlZjWW_400x400_nmb14d.jpg'></img>
+                <img style={{ width: '7em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/international-fund-for-agricultural-development-ifad-vector-logo_cxnhk4.png'></img>
+                <img style={{ width: '7em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/download_e4wgtp.png'></img>
             </Box >
         </div >
     )
