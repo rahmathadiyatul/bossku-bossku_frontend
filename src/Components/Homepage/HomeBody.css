@@ -507,7 +507,9 @@
     margin-top: 3em;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 3em;
+    align-items: center;
 }
 
 .trains {
