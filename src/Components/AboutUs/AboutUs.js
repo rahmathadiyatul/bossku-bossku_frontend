@@ -27,15 +27,15 @@ const AboutUs = () => {
                     <Box class='embark-box'>
                         <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701182275/bossku/embark/icon_gpdmxr.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Our Purpose</Typography>
-                            <Typography class='text-2'>To revolutionize the way SMEs navigate the business landscape. With our comprehensive one-stop platform, we're here to uplift, guide, and propel your business forward.</Typography>
+                            <Typography class='texts-1'>Our Purpose</Typography>
+                            <Typography class='texts-2'>To revolutionize the way SMEs navigate the business landscape. With our comprehensive one-stop platform, we're here to uplift, guide, and propel your business forward.</Typography>
                         </Box>
                     </Box>
                     <Box class='embark-box'>
                         <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701182275/bossku/embark/icon_gpdmxr.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Responsibility</Typography>
-                            <Typography class='text-2'>Whether it's mentoring, funding, logistics, or global expansion, Bossku has you covered.</Typography>
+                            <Typography class='texts-1'>Responsibility</Typography>
+                            <Typography class='texts-2'>Whether it's mentoring, funding, logistics, or global expansion, Bossku has you covered.</Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -61,14 +61,14 @@ const AboutUs = () => {
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185316/bossku/embark/vr-glasses_1_mypha8.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Elevate Your Vision</Typography>
+                            <Typography class='texts-1'>Elevate Your Vision</Typography>
                             <Typography class='text-3'>Your vision is the North Star guiding your every move. Bossku elevates that vision by offering insights, data-driven strategies, and a global perspective that propels you towards exponential growth.</Typography>
                         </Box>
                     </Box>
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185316/bossku/embark/transformation_1_f2jur6.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Unwavering Support</Typography>
+                            <Typography class='texts-1'>Unwavering Support</Typography>
                             <Typography class='text-3'>With Bossku, you're not alone on this journey. We stand beside you, providing the guidance, mentorship, and unwavering support that turns challenges into triumphs</Typography>
                         </Box>
                     </Box>
@@ -77,14 +77,14 @@ const AboutUs = () => {
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185317/bossku/embark/doctor-bag_1_o7wny2.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Foster Connections</Typography>
+                            <Typography class='texts-1'>Foster Connections</Typography>
                             <Typography class='text-3'>Join a community of fellow founders who understand the exhilaration and the grind. Network, collaborate, and learn from one another – because growth is better when shared</Typography>
                         </Box>
                     </Box>
                     <Box class='embark-box'>
                         <img className='pillar-img' src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701185317/bossku/embark/book_1_1_eovdkr.svg'></img>
                         <Box class='embark-text'>
-                            <Typography class='text-1'>Step into Your Power</Typography>
+                            <Typography class='texts-1'>Step into Your Power</Typography>
                             <Typography class='text-3'>The journey ahead is not for the faint of heart. It's for those who dare to dream, dare to act, and dare to own their destiny. It's for you, the fearless founder who's ready to embrace challenges and turn them into opportunities</Typography>
                         </Box>
                     </Box>

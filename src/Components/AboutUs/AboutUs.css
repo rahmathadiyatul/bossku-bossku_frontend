@@ -160,6 +160,24 @@
     display: none;
 }
 
+.texts-1 {
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: Poppins;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.texts-2 {
+    display: flex;
+    max-width: 38em;
+    color: var(--old-color-styles-primary-text, #121E31);
+    font-family: sans-serif;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 400;
+}
+
 .text-3 {
     display: flex;
     max-width: 38em;

@@ -117,7 +117,8 @@ const ContactUs = () => {
                 <Link to='/register'>
                     <Button sx={{
                         padding: '.5em 2em',
-                        marginTop: '2%',
+                        marginTop: '2%', 
+                        marginRight:'5%',
                         borderRadius: '8px',
                         background: '#121E31',
                         color: 'white',
