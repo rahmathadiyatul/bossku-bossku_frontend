@@ -119,22 +119,22 @@ const AboutUs = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{ height: '100vh', gap: '1em', display: 'flex', flexDirection: 'column', paddingBottom: '1em', alignItems: 'center' }}>
+            <Box sx={{ height: '100vh', gap: '1em', display: 'flex', flexDirection: 'column', paddingBottom: '2em', alignItems: 'center' }}>
                 <Typography class='journey'>Bossku News</Typography>
                 <Typography class='par-2'>Are you ready to forge your legacy? Join us at Bossku, where your journey as a founder is celebrated, supported, and elevated. Let's shape the future, one venture at a time</Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: '2em' }}>
                     <NewsCard
                         cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359327/bossku/embark/placeholder_fseomi.jpg'
-                        cardTitle='New vaccine for cattle protects against fetal calf loss from EBA – anatomy of..'
-                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        cardTitle='Crafting a Winning Presence: Innovative Marketing Strategies for SME Triumph'
+                        cardPar='Uncover the secrets to SME marketing success with our latest article. Dive into innovative strategies that empower small and medium-sized enterprises to carve out a distinctive presence, connect with audiences, and achieve triumphant results in the competitive business landscape'
                         cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359356/bossku/embark/placeholder_1_a48vxr.jpg'
                         cardName='Hawkins Junior'
                         cardStamp='24min read - November 21th, 2020'
                     ></NewsCard>
                     <NewsCard
                         cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356617/bossku/embark/placeholder_nj1ddz.png'
-                        cardTitle='4 Things parents learned for they jids in 2020'
-                        cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        cardTitle='Navigating Growth: Strategies for SME Success in a Dynamic Business Landscape'
+                        cardPar="Explore proven strategies and insights for SMEs to thrive in today's dynamic business landscape. From innovative marketing approaches to operational efficiency tips, discover the keys to navigating growth and ensuring lasting success for your small or medium-sized enterprise"
                         cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359356/bossku/embark/placeholder_2_r8md2p.png'
                         cardName='Jean Kapoor'
                         cardStamp='24min read - November 21th, 2020'
@@ -142,8 +142,8 @@ const AboutUs = () => {
                     <Box class='mobile-news'>
                         <NewsCard
                             cardImg='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701356751/bossku/embark/placeholder_1_qcsnem.png'
-                            cardTitle='He Created the Web. Now He’s Out to Remake the Digital World.'
-                            cardPar='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                            cardTitle="Thriving in Tomorrow's Market: Unveiling the Latest Trends for SMEs"
+                            cardPar="Stay ahead in the dynamic world of business with our insightful article, 'Thriving in Tomorrow's Market.' Explore the latest trends shaping the future of small and medium-sized enterprises (SMEs). Discover strategic insights to adapt, innovate, and position your business for success in the evolving market landscape"
                             cardLink='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701359355/bossku/embark/placeholder_3_icj8tz.png'
                             cardName='Melinda Humbles'
                             cardStamp='24min read - November 21th, 2020'

@@ -11,7 +11,7 @@ const SuccessStory = () => {
                 <Box class='upper-left'>
                     <Typography class='success-story-1'>SUCCESS STORY</Typography>
                     <Typography class='success-story-2'>Read Their Stories With Bossku</Typography>
-                    <Typography class='success-story-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</Typography>
+                    <Typography class='success-story-3'>Witness the transformative impact Bossku has had on small and medium-sized enterprises (SMEs) Our commitment to supercharging business growth has resulted in numerous success stories from delighted clients.</Typography>
                 </Box>
                 <Button class='button'>
                     <Typography class='button-text'>View More</Typography>
@@ -21,10 +21,9 @@ const SuccessStory = () => {
             <Box class='lower'>
                 <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700923643/bossku/d5b10ba2a25136f175cda956bc7dac1b_fflq3o.png'></img>
                 <Box class='lower-right'>
-                    <Typography class='text-1'>Samcung Okulus Rivt PC - Powered VR  Gaming Headset</Typography>
-                    <Typography class='text-2'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit au</Typography>
-                    <Typography class='text-3'>Rp 24,553,852</Typography>
-                    <Typography class='text-4'>Total funded</Typography>
+                    <Typography class='text-1'>UPLAND</Typography>
+                    <Typography class='text-2'><i>"Bossku has been the catalyst for our business expansion. Their strategic insights, tailored solutions, and unwavering support have been instrumental in achieving remarkable growth. Working with them has been nothing short of a game-changer." <br></br>- Upland, Jawa Barat</i></Typography>
+                    <Typography class='money-text'>Rp 24,553,852,-</Typography>
                     <RatingClass></RatingClass>
                 </Box>
             </Box>

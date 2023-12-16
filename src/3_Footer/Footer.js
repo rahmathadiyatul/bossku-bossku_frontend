@@ -44,8 +44,8 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Box class='footer-2'>
-                    <Typography class='header'>Akcel</Typography>
-                    <Typography class='data'>Why Akcel</Typography>
+                    <Typography class='header'>Bossku</Typography>
+                    <Typography class='data'>Why Bossku</Typography>
                     <Typography class='data'>Enterprise</Typography>
                     <Typography class='data'>Customer Story</Typography>
                     <Typography class='data'>Security</Typography>
@@ -73,8 +73,9 @@ const Footer = () => {
                     <Typography class='header'>Get in Touch with Us</Typography>
                     <Box class='footer-contacts'>
                         <LocationOn></LocationOn>
-                        <Typography class='data'>832  Thompson Drive, San Fransisco<br></br>
-                            CA 94107, United States</Typography>
+                        <Typography class='data'>Kemang 10 Building, Level 3,<br></br> Jalan Kemang Raya Nomor 10A, <br></br>Kel. Bangka, Kec. Mampang Prapatan, <br></br>Kota Adm. Jakarta
+                        Selatan, <br></br>Provinsi DKI Jakarta
+                        </Typography>
                     </Box>
                     <Box class='footer-contacts'>
                         <Call></Call>

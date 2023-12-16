@@ -1,11 +1,32 @@
+.training-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0px 0px;
+}
+
 .training-box img {
     width: 15em;
     flex-shrink: 0;
-    border-radius: 12px 12px 0px 0px
+    border-radius: 12px 12px 0px 0px;
 }
 
 .training-data {
-    padding: 0 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
+}
+
+.training-button{
+    position: absolute;
+    bottom: 8em;
+    left: 1em;
+    display: flex;
+    padding: .8em 1.35em;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    border-radius: .93em;
+    background: var(--Semantic-Danger, #F64C4C);
+    border: none;
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {

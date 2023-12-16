@@ -70,9 +70,9 @@ const Projects = () => {
                     }}
                     >All Projects</Button>
                     <Button class='projects-cats'>Technology</Button>
-                    <Button class='projects-cats'>Medical</Button>
-                    <Button class='projects-cats'>Business</Button>
                     <Button class='projects-cats'>Fashion</Button>
+                    <Button class='projects-cats'>Business</Button>
+                    <Button class='projects-cats'>F & B</Button>
                 </Box>
                 <Box sx={{ width: '40%', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
                     <Button sx={{
@@ -100,7 +100,9 @@ const Projects = () => {
                     <ProjectCardSet></ProjectCardSet>
                 </Box>
             </Box>
-            <Button class='load-more'>Load More</Button>
+            <Box class='button-load'>
+                <Button class='load-more'>Load More</Button>
+            </Box>
             <OurPartners></OurPartners>
             <Weekly></Weekly>
             <Footer></Footer>

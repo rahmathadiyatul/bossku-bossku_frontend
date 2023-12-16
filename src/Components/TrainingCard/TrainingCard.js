@@ -5,7 +5,8 @@ import './../ProjectCard/ProjectCard.css'
 
 import RatingClass from './../ProjectCard/RatingClass'
 
-const TrainingCard = () => {
+const TrainingCard = (props) => {
+    const { titles } = props;
     return (
         <div style={{
             display: 'flex', flexDirection: 'column', margin: '0 1em',
@@ -13,11 +14,11 @@ const TrainingCard = () => {
             borderRadius: '12px 12px 12px 12px'
         }}>
             <Box class='training-box'>
-                <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700923643/bossku/d5b10ba2a25136f175cda956bc7dac1b_fflq3o.png'></img>
-                <Button></Button>
+                <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702698593/bossku/unsplash_tLZhFRLj6nY_x071me.png'></img>
+                <Button class='training-button'>Online</Button>
             </Box>
             <Box class='training-data'>
-                <Typography class='title'>Pemasaran di Media Sosial Sebagai Tenaga Pemasaran</Typography>
+                <Typography class='title'>{titles}</Typography>
                 <RatingClass></RatingClass>
             </Box>
         </div >

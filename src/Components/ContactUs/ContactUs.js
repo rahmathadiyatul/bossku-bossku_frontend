@@ -10,10 +10,10 @@ import './../Homepage/HomeBody.css'
 
 const ContactUs = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', fontSize: '15px', gap: '1em ' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', fontSize: '15px' }}>
             <Header></Header>
             <Box class='contact-us-header' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography class='journey'>Contact Ussssssss</Typography>
+                <Typography class='journey'>Contact Us</Typography>
                 <Typography class='par-2'>Loremmmm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
             </Box>
             <Box class='contacts-data'>

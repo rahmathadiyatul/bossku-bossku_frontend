@@ -8,11 +8,11 @@ const WhatTheySay = () => {
     return (
         <div className='what-they'>
             <Typography class='journey'>What they say</Typography>
-            <Typography class='success-story-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Typography>
+            <Typography class='success-story-3'>"The impact of Bossku’s expertise on our operations was immediate. Their insights and solutions not only saved us resources but positioned us for sustainable growth in the long run." - Upland Kab.Sumenep</Typography>
             <Box class='comment'>
                 <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700975078/bossku/ProjectCard/c862k6drfoaloj62wnlo.svg'></img>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <Typography class='par-comment'>“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est”</Typography>
+                    <Typography class='par-comment'>“Partnering with Bossku was the best decision we made for our digital strategy. Their team's expertise and dedication catapulted us to the forefront of our industry." - Upland Kab.Banjarnegara</Typography>
                 </Box>
                 <Box style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
                     <Box style={{ display: 'flex', flexDirection: 'row', gap: '1em', alignItems: 'center' }}>
