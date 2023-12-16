@@ -121,7 +121,7 @@ const HomeBody = () => {
                             <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700848901/bossku/members/DSC08075_xzfvho.png'></img>
                         </Box>
                         <Typography class='name'>Amelia Nurfauziah, S.I.Kom</Typography>
-                        <Typography class='desc'>Experience with brand communications and community with career history as Brand Manager PT. Solusi Diagnostik Indonesia and Project Manager PT. Ceria Komunika Indonesia</Typography>
+                        <Typography class='desc'>Experience with brand strategy with career history as Brand Manager of PT. Solusi Diagnostik Indonesia and Senior Project Manager of Boleh Dicoba Digital</Typography>
                     </div>
                     <div className='members'>
                         <Box class='image'>

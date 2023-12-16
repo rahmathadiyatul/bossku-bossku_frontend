@@ -16,10 +16,10 @@ const WhatTheySay = () => {
                 </Box>
                 <Box style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
                     <Box style={{ display: 'flex', flexDirection: 'row', gap: '1em', alignItems: 'center' }}>
-                        <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700975322/bossku/placeholder_1_mpf4pn.jpg'></img>
+                        <img style={{width:'5em', height:'5em'}} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702707316/bossku/didi_zhjq4l.png'></img>
                         <Box style={{ display: 'flex', flexDirection: 'column' }}>
-                            <Typography class='wts-name'>Jonathan Lee</Typography>
-                            <Typography class='wts-role'>Joe’s Parents</Typography>
+                            <Typography class='wts-name'>Didi Sukmana</Typography>
+                            <Typography class='wts-role'>Upland Kab. Banjarnegara</Typography>
                         </Box>
                     </Box>
                     <Box class='stars' style={{ display: 'flex', flexDirection: 'row' }}>

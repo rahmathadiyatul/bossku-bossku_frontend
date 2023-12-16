@@ -40,7 +40,7 @@ export default function FindInvestor() {
                 <DialogTitle sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Typography class='wts-name'>Find Investor</Typography>
-                        <Typography class='wts-role'>Lorem ipsum dolor sit amet</Typography>
+                        <Typography class='wts-role'>Connect your best investor here</Typography>
                     </Box>
                     <Close sx={{ cursor: 'pointer' }} onClick={handleClose}></Close>
                 </DialogTitle>

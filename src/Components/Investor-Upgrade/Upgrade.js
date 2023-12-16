@@ -45,7 +45,7 @@ export default function Upgrade(props) {
                 <DialogTitle sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Typography class='wts-name'>Upgrade</Typography>
-                        <Typography class='wts-role'>Lorem ipsum dolor sit amet</Typography>
+                        <Typography class='wts-role'>Upgrade and maximize your experience with Bossku</Typography>
                     </Box>
                     <Close sx={{ cursor: 'pointer' }} onClick={handleClose}></Close>
                 </DialogTitle>

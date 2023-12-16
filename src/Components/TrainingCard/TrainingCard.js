@@ -6,7 +6,7 @@ import './../ProjectCard/ProjectCard.css'
 import RatingClass from './../ProjectCard/RatingClass'
 
 const TrainingCard = (props) => {
-    const { titles } = props;
+    const { titles, img } = props;
     return (
         <div style={{
             display: 'flex', flexDirection: 'column', margin: '0 1em',
@@ -14,7 +14,7 @@ const TrainingCard = (props) => {
             borderRadius: '12px 12px 12px 12px'
         }}>
             <Box class='training-box'>
-                <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702698593/bossku/unsplash_tLZhFRLj6nY_x071me.png'></img>
+                <img src={img}></img>
                 <Button class='training-button'>Online</Button>
             </Box>
             <Box class='training-data'>
