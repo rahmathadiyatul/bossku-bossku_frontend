@@ -67,7 +67,7 @@ const NewPass = () => {
     return (
         <div>
             <header>
-                <Link to='/'>
+                <Link to='/home'>
                     <img className='logo' src="https://res.cloudinary.com/dxyxg3egs/image/upload/v1665861626/SoupProject/image_1_1_tj3sdx.png" alt="logo"></img>
                 </Link>
             </header>

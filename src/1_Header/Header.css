@@ -109,7 +109,23 @@ header {
     z-index: 1;
 }
 
+.nav_links2 {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
 .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav_links2 li {
     display: inline-block;
     padding: 0px 20px;
     position: relative;
@@ -124,7 +140,23 @@ header {
     z-index: 3;
 }
 
+.nav_links2 li a {
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 3;
+}
+
 .nav_links li a:hover {
+    color: #e10000
+}
+
+.nav_links2 .dropdown-items {
+    color: #BD0304;
+}
+
+.nav_links2 li a:hover {
     color: #e10000
 }
 

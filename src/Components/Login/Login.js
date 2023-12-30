@@ -7,7 +7,7 @@ import H1User from './../UserPageComponents/H1User';
 import H2User from './../UserPageComponents/H2User';
 import InputUser from './../UserPageComponents/InputUser';
 import '@fontsource/montserrat/400.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { ValidateEmail } from './../UserPageComponents/Validation.js';
 import { TokenContext } from './../UserPageComponents/TokenContext.js'
 
@@ -47,10 +47,12 @@ const Login = () => {
         clearData()
         Http.post('User/Login', userData)
             .then((res) => {
-                if (res.status === 200) {
+                if (res.status === 200 && res.data.token != null) {
                     setToken(res.data.token)
                     localStorage.setItem('user', res.data.idUser)
-                    navigate('/')
+                    navigate('/home')
+                } else {
+                    setErrorMsg('Email or Password Invalid')
                 }
             }
             ).catch((err) => {
@@ -70,16 +72,19 @@ const Login = () => {
                 <InputUser id='email' type="email" text='Email' value={email} onChange={(e) => handleInputChange(e)}></InputUser>
                 <InputUser id='password' type="password" text='Password' value={password} onChange={(e) => handleInputChange(e)}></InputUser>
                 <p style={{ color: "red", textAlign: 'left', marginTop: '20px' }}>{errorMsg}</p>
-                <p className='par'>Forgot Password?<a style={{
+                <p className='para'>Forgot Password?<a style={{
                     textDecoration: 'none', marginLeft: '.5em'
                 }} href='/resetpassword'>Click Here</a></p>
             </div>
             <div className='card3'>
                 <SingleButton onClick={() => handleSubmit()} type='submit' orangeButton={'Login'}></SingleButton>
                 <div className='card4'>
-                    <p>Don't have account? <a style={{
-                        textDecoration: 'none', marginLeft: '.5em'
-                    }} href='/register'>Sign Up here</a></p>
+                    <p>
+                        Don't have an account?
+                    </p>
+                    <Link to='/register' style={{ textDecoration: 'none', marginLeft: '.5em' }}>
+                        <h4>Sign Up here</h4>
+                    </Link>
                 </div>
             </div>
         </div >

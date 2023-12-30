@@ -6,10 +6,11 @@ import H2User from './../UserPageComponents/H2User';
 import InputUser from './../UserPageComponents/InputUser';
 import '@fontsource/montserrat/400.css';
 import Http from './../../Axios/Config';
-import { Navigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ValidateEmail } from './../UserPageComponents/Validation';
-import { TokenContext } from './../UserPageComponents/TokenContext';
+import { TokenContext } from './../../Axios/Context';
 import Header from '../../1_Header/Header';
+import { Snackbar, Alert } from '@mui/material';
 
 
 const Register = () => {
@@ -17,9 +18,10 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [errorMsg, setErrorMsg] = useState('')
-
-    const { setToken } = useContext(TokenContext)
+    const [errorMsg, setErrorMsg] = useState('');
+    const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
+    const navigate = useNavigate();;
+    //const { setToken } = useContext(TokenContext)
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -43,10 +45,13 @@ const Register = () => {
         setPassword('')
         setConfirmPassword('')
     }
-    // Http.post('User/Register', article)
-    // .then(res => this.setState({ articleId: res.data.id })).catch((err) => {
-    //     console.error('There was an error!', err)
-    // })
+
+    const handleSnackbarClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpenSuccessSnackbar(false);
+    };
 
     const handleSubmit = () => {
         if (name === '' || email === '' || password === '') {
@@ -66,32 +71,24 @@ const Register = () => {
             email: email,
             password: password
         }
-        console.log(userData)
         clearData()
         Http.post('User/Register', userData)
             .then((res) => {
                 if (res.status === 200) {
-                    Http.post('User/Login', userData)
-                        .then((response) => {
-                            if (response.status === 200) {
-                                setToken(response.data.token)
-                                Navigate('/')
-                            }
-                        }
-                        ).catch((error) => {
-                            if (error) {
-                                console.log(error)
-                            }
-                        })
+                    setTimeout(() => {
+                        setOpenSuccessSnackbar(true);
+                    }, 6000)
+                    navigate('/login');
                 }
-            }).catch((err) => {
-                console.log('There was an error!', err)
             })
+            .catch((err) => {
+                console.log('There was an error!', err);
+            });
     }
 
     return (
         <div>
-            <Header></Header>
+            {/* <Header></Header> */}
             <div className='card'>
                 <H1User text={'Are you ready to sell worldwide?'}></H1User>
                 <H2User text={'Please register first'}></H2User>
@@ -102,14 +99,24 @@ const Register = () => {
                 <p style={{ color: "red", textAlign: 'left', marginTop: '20px' }}>{errorMsg}</p>
             </div>
             <div className='card3'>
-                <Link to='/'>
+                <div>
                     <SingleButton onClick={() => handleSubmit()} type='submit' orangeButton={'Sign Up'}></SingleButton>
-                </Link>
+                </div>
                 <div className='card4'>
                     <p>Have account? <a style={{
                         textDecoration: 'none'
                     }} href='/login'>Login Here</a></p>
                 </div>
+                <Snackbar
+                    open={openSuccessSnackbar}
+                    autoHideDuration={6000}
+                    onClose={handleSnackbarClose}
+                    anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                >
+                    <Alert onClose={handleSnackbarClose} severity='success'>
+                        Registration successful! You can now log in.
+                    </Alert>
+                </Snackbar>
             </div>
         </div >
     )

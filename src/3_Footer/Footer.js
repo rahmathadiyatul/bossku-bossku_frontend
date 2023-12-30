@@ -12,7 +12,7 @@ const Footer = () => {
             <Box class='main-footer'>
                 <Box class='footer-1'>
                     <Box class='full-logo'>
-                        <Link to='/'>
+                        <Link to='/home'>
                             <img
                                 className='logo'
                                 src="https://res.cloudinary.com/dxyxg3egs/image/upload/v1700152396/bossku/logo_od1hnl.png"
@@ -74,7 +74,7 @@ const Footer = () => {
                     <Box class='footer-contacts'>
                         <LocationOn></LocationOn>
                         <Typography class='data'>Kemang 10 Building, Level 3,<br></br> Jalan Kemang Raya Nomor 10A, <br></br>Kel. Bangka, Kec. Mampang Prapatan, <br></br>Kota Adm. Jakarta
-                        Selatan, <br></br>Provinsi DKI Jakarta
+                            Selatan, <br></br>Provinsi DKI Jakarta
                         </Typography>
                     </Box>
                     <Box class='footer-contacts'>

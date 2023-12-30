@@ -1,17 +1,39 @@
-import React, { useState, useNavigate } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
-import PersonIcon from '@mui/icons-material/Person';
-import { Button, Dropdown } from '@mui/base';
+import { Button } from '@mui/base';
 import { Typography, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { Email, Call, ExitToApp, Menu } from '@mui/icons-material';
+import { Link, useNavigate } from 'react-router-dom';
+import { Email, Call, ExitToApp, Menu, Person } from '@mui/icons-material';
+import IconButton from '@mui/material/IconButton';
 import Upgrade from '../Components/Investor-Upgrade/Upgrade';
+import { useAuth } from './../Components/UserPageComponents/AuthContext.js'
 
 function Header(props) {
-  const { contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
+  const { navLinks = 'nav_links', contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [openNavbar, setOpenNavbar] = useState(false);
+  const { token, logout } = useAuth();
+  const [upperHeadVisible, setUpperHeadVisible] = useState(!token);
+  const navigate = useNavigate()
 
+  useEffect(() => {
+    setUpperHeadVisible(!token);
+
+    if (token) {
+      setUpperHeadVisible(false);
+    }
+  }, [token]);
+
+  useEffect(() => {
+    setUpperHeadVisible(false);
+    return () => {
+    };
+  }, []);
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -23,53 +45,55 @@ function Header(props) {
 
   return (
     <div className={headAll}>
-      <Box class={upperHead}>
-        <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
-          <Typography class='top-header'>Your dreams. Your venture. You are The  Boss.</Typography>
-          <Button style={{
-            display: 'flex',
-            flexDirection: 'row',
-            height: '2.5em',
-            borderRadius: '8px',
-            background: 'var(--Changes---Main, #BD0304)',
-            alignItems: 'center',
-            border: 'none',
-            color: 'white',
-            padding: '0 2em',
-            gap: '.8em',
-            cursor: 'pointer',
-          }}
-          >
-            <Link style={{
+      {upperHeadVisible && (
+        <Box class={upperHead}>
+          <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
+            <Typography class='top-header'>Your dreams. Your venture. You are The  Boss.</Typography>
+            <Button style={{
               display: 'flex',
               flexDirection: 'row',
               height: '2.5em',
+              borderRadius: '8px',
+              background: 'var(--Changes---Main, #BD0304)',
               alignItems: 'center',
+              border: 'none',
               color: 'white',
-              textDecoration: 'none',
+              padding: '0 2em',
               gap: '.8em',
+              cursor: 'pointer',
             }}
-              to='/register'>
-              <Upgrade hideButton={true}></Upgrade>
-              <ExitToApp></ExitToApp>
-              <Typography>Sign Up Now</Typography>
-            </Link>
-          </Button>
-        </Box>
-        <Box class={contacts}>
-          <Box class='contact'>
-            <Call sx={{ height: '.7em' }}></Call>
-            <Typography sx={{ fontSize: '.8em' }} class='top-texts'>394-091-3312</Typography>
+            >
+              <Link style={{
+                display: 'flex',
+                flexDirection: 'row',
+                height: '2.5em',
+                alignItems: 'center',
+                color: 'white',
+                textDecoration: 'none',
+                gap: '.8em',
+              }}
+                to='/register'>
+                <Upgrade hideButton={true}></Upgrade>
+                <ExitToApp></ExitToApp>
+                <Typography>Sign Up Now</Typography>
+              </Link>
+            </Button>
           </Box>
-          <Box class='contact'>
-            <Email sx={{ height: '.7em' }}></Email>
-            <Typography sx={{ fontSize: '.8em' }} class='top-texts'>help@bossku.id</Typography>
+          <Box class={contacts}>
+            <Box class='contact'>
+              <Call sx={{ height: '.7em' }}></Call>
+              <Typography sx={{ fontSize: '.8em' }} class='top-texts'>394-091-3312</Typography>
+            </Box>
+            <Box class='contact'>
+              <Email sx={{ height: '.7em' }}></Email>
+              <Typography sx={{ fontSize: '.8em' }} class='top-texts'>help@bossku.id</Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
+      )}
       <header className={lowerHead}>
         <div className='full-logo'>
-          <Link to='/'>
+          <Link to='/home'>
             <img
               className='logo'
               src="https://res.cloudinary.com/dxyxg3egs/image/upload/v1700152396/bossku/logo_od1hnl.png"
@@ -86,15 +110,15 @@ function Header(props) {
             <Menu sx={{ height: '2em', width: '2em' }}></Menu>
             {openNavbar && (
               <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em', marginRight: '2em' }} className='dropdown'>
-                <li><Link class='dropdown-items' to='/'>Home</Link></li>
+                <li><Link class='dropdown-items' to='/home'>Home</Link></li>
                 <li><Link class='dropdown-items' to='/projects'>Services</Link></li>
                 <li><Link class='dropdown-items' to='/about-us'>About Us</Link></li>
                 <li><Link class='dropdown-items' to='/contact-us'>Contact Us</Link></li>
               </ul>
             )}
           </Box>
-          <ul className='nav_links'>
-            <li><Link to='/'>Home</Link></li>
+          <ul className={navLinks}>
+            <li><Link to='/home'>Home</Link></li>
             <li>
               <a onClick={toggleDropdown}>
                 Services
@@ -130,10 +154,19 @@ function Header(props) {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }} to='/home'>
-                  <PersonIcon sx={{ color: '#BD0304', height: '1em' }} className='person-icon'></PersonIcon>
+                  <Person sx={{ color: '#BD0304', height: '1em' }} className='person-icon'></Person>
                   <Typography class='my-account'>My Account</Typography>
                 </Link>
               </Button>
+            </li>
+            <li>
+              <IconButton
+                onClick={handleLogout}
+                color="inherit"
+                aria-label="Logout"
+              >
+                <ExitToApp />
+              </IconButton>
             </li>
           </ul>
         </nav>

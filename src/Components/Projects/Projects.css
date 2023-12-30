@@ -12,7 +12,7 @@
 
 .cover-text {
     position: absolute;
-    top: 50%;
+    top: 5em;
     color: var(--old-color-styles-white, #FFF);
     text-align: center;
     font-family: Poppins;
@@ -32,8 +32,6 @@
     color: #BD0304;
     border-radius: 8px;
     box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
-    position: absolute;
-    top: 76.5vh;
 }
 
 .project-input {
@@ -126,7 +124,7 @@
     margin-bottom: 3%;
 }
 
-.button-load{
+.button-load {
     padding-top: 2em;
     display: flex;
     flex-direction: row;
@@ -166,7 +164,7 @@
     .cover-text {
         color: white;
         position: absolute;
-        top: 22%;
+        top: 15%;
         text-wrap: wrap;
         width: 80%;
         font-size: 1.5em;
@@ -174,7 +172,7 @@
 
     .project-search {
         position: absolute;
-        top: 30%;
+        top: 22%;
     }
 
     .project-nav {

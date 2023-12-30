@@ -24,6 +24,7 @@ const Projects = () => {
                 lowerHead='lower-head2'
                 navs='navs2'
                 logoText='logo-text2'
+                navLinks='nav_links2'
             ></Header>
             <Box class='cover'>
                 <img src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701554010/bossku/background_kdgr4l.png'></img>
