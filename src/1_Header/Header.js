@@ -111,7 +111,7 @@ function Header(props) {
             {openNavbar && (
               <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em', marginRight: '2em' }} className='dropdown'>
                 <li><Link class='dropdown-items' to='/home'>Home</Link></li>
-                <li><Link class='dropdown-items' to='/projects'>Services</Link></li>
+                <li><Link cursor='pointer' class='dropdown-items' to='/projects'>Services</Link></li>
                 <li><Link class='dropdown-items' to='/about-us'>About Us</Link></li>
                 <li><Link class='dropdown-items' to='/contact-us'>Contact Us</Link></li>
               </ul>
