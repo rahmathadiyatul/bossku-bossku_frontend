@@ -7,6 +7,7 @@ import { Email, Call, ExitToApp, Menu, Person } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
 import Upgrade from '../Components/Investor-Upgrade/Upgrade';
 import { useAuth } from './../Components/UserPageComponents/AuthContext.js'
+import InvestorDialog from '../Components/Investor-Upgrade/InvestorDialog.js';
 
 function Header(props) {
   const { navLinks = 'nav_links', contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
@@ -23,6 +24,10 @@ function Header(props) {
       setUpperHeadVisible(false);
     }
   }, [token]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     setUpperHeadVisible(false);
@@ -122,20 +127,13 @@ function Header(props) {
             <li>
               <a onClick={toggleDropdown}>
                 Services
-                {isDropdownOpen && (
-                  <ul style={{ backgroundColor: 'white', marginTop: '2em' }} className='dropdown'>
-                    <li><Link class='dropdown-items' to='/projects'>Funding</Link></li>
-                    <li><Link class='dropdown-items' to='/projects'>Fund Submission</Link></li>
-                    <li><Link class='dropdown-items' to='/projects'>Buy Product</Link></li>
-                    <li><Link class='dropdown-items' to='/projects'>Sell Product</Link></li>
-                    <li><Link class='dropdown-items' to='/projects'>Training</Link></li>
-                  </ul>
+                {isDropdownOpen && (<InvestorDialog></InvestorDialog>
                 )}
               </a>
             </li>
             <li><Link to='/about-us'>About</Link></li>
             <li><Link to='/contact-us'>Contact Us</Link></li>
-            <li className={account}>
+            {/* <li className={account}>
               <Button style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -158,7 +156,7 @@ function Header(props) {
                   <Typography class='my-account'>My Account</Typography>
                 </Link>
               </Button>
-            </li>
+            </li> */}
             <li>
               <IconButton
                 onClick={handleLogout}

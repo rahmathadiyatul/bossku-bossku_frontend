@@ -71,6 +71,6 @@
     border-radius: 2em;
     background: var(--old-color-styles-white, #FFF);
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }

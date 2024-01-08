@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material'
 import { CheckCircleOutline } from '@mui/icons-material'
 import ProjectCard from '../../ProjectCard/ProjectCard'
 import './AboutProject.css'
 
 const AboutProject = () => {
+    const navigate = useNavigate();
+    const onProjectClick = () => {
+        navigate('/project-detail')
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', margin: '10% 10%', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', margin: '3% 10%', justifyContent: 'space-between' }}>
             <Box class='project-story'>
                 <Box class='story-navbar'>
                     <Typography class='main-bar'>About Project</Typography>
@@ -56,13 +66,14 @@ const AboutProject = () => {
                 </Typography>
             </Box>
             <Box class='side-bar'>
-                <h2 style={{ marginTop: '.7em' }}>Support other projects</h2>
+                <h2 style={{ marginTop: '.5em' }}>Support other projects</h2>
                 <ProjectCard
                     category='MEDICAL'
                     cover='https://res.cloudinary.com/dxyxg3egs/image/upload/v1700929257/bossku/placeholder_x31gbm.jpg'
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
                 <ProjectCard
                     category='MEDICAL'
@@ -70,6 +81,7 @@ const AboutProject = () => {
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
             </Box>
         </div >

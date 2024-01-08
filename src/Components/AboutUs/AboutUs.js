@@ -112,7 +112,7 @@ const AboutUs = () => {
                     </Box>
                     <Box class='buttons'>
                         <FindInvestor></FindInvestor>
-                        <Upgrade styleClass='upgrade' butText='Upgrade'></Upgrade>
+                        {/* <Upgrade styleClass='upgrade' butText='Upgrade'></Upgrade> */}
                     </Box>
                     <Box>
 

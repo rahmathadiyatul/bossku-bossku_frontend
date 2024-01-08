@@ -5,9 +5,10 @@ import RatingClass from './RatingClass'
 import { ShoppingCart } from '@mui/icons-material'
 
 const ProjectCard = (props) => {
-    const { cover, category, title, accountName, location } = props
+    const { cover, category, title, accountName, location, onClick } = props
+
     return (
-        <div className='project'>
+        <div className='project' onClick={onClick}>
             <img src={cover}></img>
             <Box class='contents'>
                 <Typography sx={{

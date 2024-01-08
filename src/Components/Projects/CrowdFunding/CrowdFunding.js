@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import ArrowRight from '@mui/icons-material/ArrowRight';
 import './../Projects.css'
 import ProjectCard from '../../ProjectCard/ProjectCard';
+import { useNavigate } from 'react-router-dom';
 
 const CrowdFunding = () => {
+    const navigate = useNavigate()
+    const onProjectClick = () => {
+        navigate('/project-detail')
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center' }}>
             <Box style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: '0 9%', alignItems: 'center' }}>
@@ -22,6 +32,7 @@ const CrowdFunding = () => {
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
                 <ProjectCard
                     category='MEDICAL'
@@ -29,6 +40,7 @@ const CrowdFunding = () => {
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
                 <ProjectCard
                     category='MEDICAL'
@@ -36,6 +48,7 @@ const CrowdFunding = () => {
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
                 <ProjectCard
                     category='MEDICAL'
@@ -43,6 +56,7 @@ const CrowdFunding = () => {
                     title='Beautiful color for designers & students'
                     accountName='Cheyenne Curtis'
                     location='New York, London'
+                    onClick={onProjectClick}
                 ></ProjectCard>
             </Box>
         </div >

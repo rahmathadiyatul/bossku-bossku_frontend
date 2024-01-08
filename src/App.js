@@ -24,7 +24,7 @@ function App() {
         <AuthProvider>
           <div>
             <Routes>
-              <Route path="/home" element={<LandingPage></LandingPage>}></Route>
+              <Route path="/home" element={<LandingPage></LandingPage>}></Route >
               <Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
               <Route path="/login" element={<Login></Login>}></Route>
               <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
@@ -36,6 +36,7 @@ function App() {
               <Route path="/resetpassword" element={<ResetPassword></ResetPassword>}></Route>
               {/* <Route path="/:category/:id" element={<DetailKelas cart={cart} setCart={setCart}></DetailKelas>}></Route> */}
               <Route path="/" element={<Login></Login>}></Route>
+              <Route path="*" element={<Login />} />
             </Routes>
           </div>
         </AuthProvider>
