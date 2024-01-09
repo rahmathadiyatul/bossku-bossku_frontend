@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import {
     Box,
     Button,
@@ -12,28 +12,156 @@ import {
     FormLabel,
     Select,
     FormGroup,
-    MenuItem
+    MenuItem,
+    Snackbar
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import './../Homepage/HomeBody.css'
 import './../Homepage/WTS&Trainings.css'
 import './InvUpg.css'
 import './../../1_Header/Header.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { ValidateEmail } from '../UserPageComponents/Validation';
+import Http from '../../Axios/Config';
 
 export default function InvestorDialog() {
     const [open, setOpen] = useState(false)
+    const [isChecked, setIsChecked] = useState(false)
+    const [errorMsg, setErrorMsg] = useState('')
+    const [fullName, setFullName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [companyName, setCompanyName] = useState('')
+    const [companyCat, setCompanyCat] = useState('')
+    const [companyLoc, setCompanyLoc] = useState('')
+    const [successOpen, setSuccessOpen] = useState(false);
+    const navigate = useNavigate()
+
+    const handleSuccessClose = () => {
+        setSuccessOpen(false);
+    };
+
     const handleClickOpen = () => {
         setOpen(true)
+        setErrorMsg('')
+    }
+
+    const handleCheckbox = () => {
+        if (!isChecked) {
+            setIsChecked(true)
+        } else {
+            setIsChecked(false)
+        }
     }
 
     const handleClose = () => {
         setOpen(false)
     }
 
+    const clearData = () => {
+        setFullName('')
+        setEmail('')
+        setPhone('')
+        setCompanyName('')
+        setCompanyCat('')
+        setCompanyLoc('')
+        setErrorMsg('')
+    }
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        if (id === "full-name") {
+            setFullName(value)
+        }
+        if (id === "email") {
+            setEmail(value)
+        }
+        if (id === "phone") {
+            setPhone(value)
+        }
+        if (id === "company-name") {
+            setCompanyName(value)
+        }
+        if (id === "company-cat") {
+            setCompanyCat(value)
+        }
+        if (id === "company-loc") {
+            setCompanyLoc(value)
+        }
+    }
+
+    const handleSubmit = () => {
+        if (ValidateEmail(email) === false) {
+            setErrorMsg('Email Invalid!')
+            return;
+        }
+        if (!fullName) {
+            setErrorMsg('Full name is required!')
+            return;
+        }
+        if (!phone) {
+            setErrorMsg('Phone number is required!')
+            return;
+        }
+        if (!companyName) {
+            setErrorMsg('Company name is required!')
+            return;
+        }
+        if (!companyLoc) {
+            setErrorMsg('Company location is required!')
+            return;
+        }
+        if (!isChecked) {
+            setErrorMsg('Please accept our terms & condtions')
+            return;
+        }
+
+        const investorData = {
+            FullName: fullName,
+            Email: email,
+            CompanyName: companyName,
+            Phone: phone,
+            CompanyCat: companyCat,
+            CompanyLoc: companyLoc
+        }
+        clearData()
+        Http.post('Investor/Signup', investorData)
+            .then((res) => {
+                if (res.status === 200) {
+                    setSuccessOpen(true);
+                    handleClose()
+                    navigate('/home')
+                } else {
+                    setErrorMsg('Data Invalid!')
+                }
+            }
+            ).catch((err) => {
+                if (err.response.status === 401) {
+                    setErrorMsg('Data Invalid!')
+                }
+            })
+    }
+
+    const handleCompanyCat = (e) => {
+        const value = e.target.getAttribute('data-value');
+        setCompanyCat(value)
+    }
+
     return (
         <Fragment>
-            <ul style={{ backgroundColor: 'white', marginTop: '2em' }} className='dropdown'>
+            <Snackbar
+                sx={{
+                    position: 'fixed',
+                    zIndex: 9999,
+                    top: '65%',
+                    marginLeft: '4%'
+                }}
+                open={successOpen}
+                autoHideDuration={3000}
+                onClose={handleSuccessClose}
+                message="Your investment registration has been successful! Please check your email to confirm the registration"
+            />
+            <ul style={{ backgroundColor: 'white', marginTop: '.5em' }} className='dropdown'>
                 <li><Link class='dropdown-items' onClick={handleClickOpen}>Funding</Link></li>
                 {/* <li><Link class='dropdown-items' to='/projects'>Fund Submission</Link></li> */}
                 <li><Link class='dropdown-items' to='/projects'>Buy Product</Link></li>
@@ -48,6 +176,7 @@ export default function InvestorDialog() {
                     </Box>
                     <Close sx={{ cursor: 'pointer' }} onClick={handleClose}></Close>
                 </DialogTitle>
+                <span style={{ color: "red", textAlign: 'left', margin: 'auto 1.5em' }}>{errorMsg}</span>
                 <DialogContent>
                     <FormGroup>
                         <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Full Name</FormLabel>
@@ -59,8 +188,10 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={fullName}
                         ></TextField>
-                        <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Email Address</FormLabel>
+                        <FormLabel sx={{ marginTop: '1.5em' }} id="email" >Email Address</FormLabel>
                         <TextField
                             autoFocus
                             margin="dense"
@@ -69,8 +200,10 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={email}
                         ></TextField>
-                        <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Phone Number</FormLabel>
+                        <FormLabel sx={{ marginTop: '1.5em' }} id="phone" >Phone Number</FormLabel>
                         <TextField
                             autoFocus
                             margin="dense"
@@ -79,8 +212,10 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={phone}
                         ></TextField>
-                        <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Company Name</FormLabel>
+                        <FormLabel sx={{ marginTop: '1.5em' }} id="companyName" >Company Name</FormLabel>
                         <TextField
                             autoFocus
                             margin="dense"
@@ -89,8 +224,10 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={companyName}
                         ></TextField>
-                        <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Company Category</FormLabel>
+                        <FormLabel sx={{ marginTop: '1.5em' }} id="company-cat" >Company Category</FormLabel>
                         <Select
                             autoFocus
                             margin="dense"
@@ -99,12 +236,14 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={companyCat}
                         >
-                            <MenuItem value="1">Logistic</MenuItem>
-                            <MenuItem value="2">B2B E-Commerce</MenuItem>
-                            <MenuItem value="3">Argitech</MenuItem>
+                            <MenuItem onClick={(e) => handleCompanyCat(e)} value="logistic">Logistic</MenuItem>
+                            <MenuItem onClick={(e) => handleCompanyCat(e)} value="b2b">B2B E-Commerce</MenuItem>
+                            <MenuItem onClick={(e) => handleCompanyCat(e)} value="argitech">Argitech</MenuItem>
                         </Select>
-                        <FormLabel sx={{ marginTop: '1.5em' }} id="full-name" >Company Location</FormLabel>
+                        <FormLabel sx={{ marginTop: '1.5em' }} id="company-loc" >Company Location</FormLabel>
                         <TextField
                             autoFocus
                             margin="dense"
@@ -113,6 +252,8 @@ export default function InvestorDialog() {
                             fullWidth
                             variant="standard"
                             required
+                            onChange={(e) => handleInputChange(e)}
+                            value={companyLoc}
                         ></TextField>
                     </FormGroup>
                 </DialogContent>
@@ -129,10 +270,10 @@ export default function InvestorDialog() {
                         gap: '.3em',
                         alignItems: 'center'
                     }}>
-                        <Checkbox></Checkbox>
+                        <Checkbox checked={isChecked} onClick={handleCheckbox}></Checkbox>
                         <Typography>Accept terms & conditions</Typography>
                     </Box>
-                    <Button class='button-send' onClick={handleClose}>
+                    <Button class='button-send' onClick={handleSubmit}>
                         <Typography class='send-text'>Send</Typography>
                     </Button>
                 </DialogActions>

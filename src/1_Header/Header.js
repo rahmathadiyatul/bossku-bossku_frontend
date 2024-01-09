@@ -125,11 +125,11 @@ function Header(props) {
           <ul className={navLinks}>
             <li><Link to='/home'>Home</Link></li>
             <li>
-              <a onClick={toggleDropdown}>
+              <a style={{ cursor: 'pointer' }} onClick={toggleDropdown}>
                 Services
-                {isDropdownOpen && (<InvestorDialog></InvestorDialog>
-                )}
               </a>
+              {isDropdownOpen && (<InvestorDialog></InvestorDialog>
+              )}
             </li>
             <li><Link to='/about-us'>About</Link></li>
             <li><Link to='/contact-us'>Contact Us</Link></li>
