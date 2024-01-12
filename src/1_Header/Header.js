@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { Button } from '@mui/base';
 import { Typography, Box } from '@mui/material';
@@ -6,38 +6,45 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Email, Call, ExitToApp, Menu, Person } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
 import Upgrade from '../Components/Investor-Upgrade/Upgrade';
-import { useAuth } from './../Components/UserPageComponents/AuthContext.js'
 import InvestorDialog from '../Components/Investor-Upgrade/InvestorDialog.js';
+import { TokenContext } from '../Components/UserPageComponents/TokenContext.js';
 
 function Header(props) {
-  const { navLinks = 'nav_links', contacts = 'contacts', account = 'account', headAll = 'head-all', upperHead = 'upper-head', lowerHead = 'lower-head', logoText = 'logo-text', navs = 'navs' } = props
+  const {
+    navLinks = 'nav_links',
+    contacts = 'contacts',
+    account = 'account',
+    headAll = 'head-all',
+    upperHead = 'upper-head',
+    lowerHead = 'lower-head',
+    logoText = 'logo-text',
+    navs = 'navs',
+    isLogin = false
+  } = props
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [openNavbar, setOpenNavbar] = useState(false);
-  const { token, logout } = useAuth();
+  const { token } = useContext(TokenContext);
   const [upperHeadVisible, setUpperHeadVisible] = useState(!token);
   const navigate = useNavigate()
+  const { setToken } = useContext(TokenContext)
 
   useEffect(() => {
-    setUpperHeadVisible(!token);
-
-    if (token) {
-      setUpperHeadVisible(false);
+    if (isLogin) {
+      setUpperHeadVisible(!isLogin);
+    } else {
+      setUpperHeadVisible(!token);
     }
+    window.scrollTo(0, 0);
   }, [token]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    setUpperHeadVisible(false);
-    return () => {
-    };
-  }, []);
+  const handleOnClick = () => {
+    navigate('/login')
+  }
 
   const handleLogout = () => {
-    logout();
-    navigate('/login');
+    setToken('')
+    localStorage.removeItem('tl')
+    navigate('/login')
   };
 
   const toggleDropdown = () => {
@@ -52,7 +59,7 @@ function Header(props) {
     <div className={headAll}>
       {upperHeadVisible && (
         <Box class={upperHead}>
-          <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em' }}>
+          <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'row', gap: '1.5em', border: 'none' }}>
             <Typography class='top-header'>Your dreams. Your venture. You are The  Boss.</Typography>
             <Button style={{
               display: 'flex',
@@ -83,6 +90,7 @@ function Header(props) {
                 <Typography>Sign Up Now</Typography>
               </Link>
             </Button>
+            <Button className='login-button' onClick={handleOnClick}>Login</Button>
           </Box>
           <Box class={contacts}>
             <Box class='contact'>
@@ -110,30 +118,45 @@ function Header(props) {
             <Typography class='smes'>SME’s Capitalization</Typography>
           </div>
         </div>
-        <nav className={navs}>
-          <Box class='menu' onClick={toggleNavbar}>
-            <Menu sx={{ height: '2em', width: '2em' }}></Menu>
-            {openNavbar && (
-              <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em', marginRight: '2em' }} className='dropdown'>
-                <li><Link class='dropdown-items' to='/home'>Home</Link></li>
-                <li><Link cursor='pointer' class='dropdown-items' to='/projects'>Services</Link></li>
-                <li><Link class='dropdown-items' to='/about-us'>About Us</Link></li>
-                <li><Link class='dropdown-items' to='/contact-us'>Contact Us</Link></li>
-              </ul>
-            )}
-          </Box>
-          <ul className={navLinks}>
-            <li><Link to='/home'>Home</Link></li>
-            <li>
-              <a style={{ cursor: 'pointer' }} onClick={toggleDropdown}>
-                Services
-              </a>
-              {isDropdownOpen && (<InvestorDialog></InvestorDialog>
+        <Box></Box>
+        {token && (
+          <nav className={navs}>
+            <Box class='menu' onClick={toggleNavbar}>
+              <Menu sx={{ height: '2em', width: '2em' }}></Menu>
+              {openNavbar && (
+                <ul style={{ backgroundColor: 'white', marginTop: '2em', width: '8.5em', paddingLeft: '2em', marginRight: '2em' }} className='dropdown'>
+                  <li><Link class='dropdown-items' to='/home'>Home</Link></li>
+                  <li><Link cursor='pointer' class='dropdown-items' to='/projects'>Services</Link></li>
+                  <li><Link class='dropdown-items' to='/about-us'>About Us</Link></li>
+                  <li><Link class='dropdown-items' to='/contact-us'>Contact Us</Link></li>
+                </ul>
               )}
-            </li>
-            <li><Link to='/about-us'>About</Link></li>
-            <li><Link to='/contact-us'>Contact Us</Link></li>
-            {/* <li className={account}>
+            </Box>
+            <ul className={navLinks}>
+              <li><Link to='/home'>Home</Link></li>
+              <li>
+                <a style={{ cursor: 'pointer' }} onClick={toggleDropdown}>
+                  Services
+                </a>
+                {isDropdownOpen && (<InvestorDialog></InvestorDialog>
+                )}
+              </li>
+              <li><Link to='/about-us'>About</Link></li>
+              <li><Link to='/contact-us'>Contact Us</Link></li>
+              <li>
+                <IconButton
+                  onClick={handleLogout}
+                  color="inherit"
+                  aria-label="Logout"
+                >
+                  <ExitToApp />
+                </IconButton>
+              </li>
+            </ul>
+          </nav>
+        )}
+      </header>
+      {/* <li className={account}>
               <Button style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -157,18 +180,6 @@ function Header(props) {
                 </Link>
               </Button>
             </li> */}
-            <li>
-              <IconButton
-                onClick={handleLogout}
-                color="inherit"
-                aria-label="Logout"
-              >
-                <ExitToApp />
-              </IconButton>
-            </li>
-          </ul>
-        </nav>
-      </header>
     </div >
   );
 }

@@ -9,7 +9,7 @@ import InputUser from './../UserPageComponents/InputUser';
 import '@fontsource/montserrat/400.css';
 import { useNavigate, Link } from 'react-router-dom';
 import { ValidateEmail } from './../UserPageComponents/Validation.js';
-import { TokenContext } from './../UserPageComponents/TokenContext.js'
+import { TokenContext } from './../UserPageComponents/TokenContext.js';
 
 const Login = () => {
     const navigate = useNavigate()
@@ -35,37 +35,42 @@ const Login = () => {
         setPassword('')
     }
 
-    const handleSubmit = () => {
-        if (ValidateEmail(email) === false) {
-            setErrorMsg('Email Invalid!')
-            return;
-        }
-        const userData = {
-            email: email,
-            password: password
-        }
-        clearData()
-        Http.post('User/Login', userData)
-            .then((res) => {
-                if (res.status === 200 && res.data.token != null) {
-                    setToken(res.data.token)
-                    localStorage.setItem('user', res.data.idUser)
-                    navigate('/home')
-                } else {
-                    setErrorMsg('Email or Password Invalid')
-                }
+    const handleSubmit = async () => {
+        try {
+            if (ValidateEmail(email) === false) {
+                setErrorMsg('Email Invalid!');
+                return;
             }
-            ).catch((err) => {
-                if (err.response.status === 401) {
-                    setErrorMsg('Email or Password Invalid')
-                    console.log('HELP!', err)
-                }
-            })
-    }
+
+            const userData = {
+                email: email,
+                password: password,
+            };
+
+            clearData();
+
+            const res = await Http.post('User/Login', userData);
+
+            if (res.status === 200 && res.data.token) {
+                setToken(res.data.token);
+                localStorage.setItem('user', res.data.idUser);
+                navigate('/home');
+            } else {
+                setErrorMsg('Email or Password Invalid');
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 401) {
+                setErrorMsg('Email or Password Invalid');
+                console.error('Authentication failed:', error);
+            } else {
+                console.error('An unexpected error occurred:', error);
+            }
+        }
+    };
 
     return (
         <div>
-            {/* /<Header></Header> */}
+            <Header isLogin={true}></Header>
             <div className='card'>
                 <H1User text={'Please Login'}></H1User>
                 <H2User text={'Please login first'}></H2User>

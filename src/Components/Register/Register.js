@@ -8,7 +8,6 @@ import '@fontsource/montserrat/400.css';
 import Http from './../../Axios/Config';
 import { useNavigate } from 'react-router-dom';
 import { ValidateEmail } from './../UserPageComponents/Validation';
-import { TokenContext } from './../../Axios/Context';
 import Header from '../../1_Header/Header';
 import { Snackbar, Alert } from '@mui/material';
 
@@ -21,7 +20,6 @@ const Register = () => {
     const [errorMsg, setErrorMsg] = useState('');
     const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
     const navigate = useNavigate();;
-    //const { setToken } = useContext(TokenContext)
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -88,7 +86,7 @@ const Register = () => {
 
     return (
         <div>
-            {/* <Header></Header> */}
+            <Header isLogin={true}></Header>
             <div className='card'>
                 <H1User text={'Are you ready to sell worldwide?'}></H1User>
                 <H2User text={'Please register first'}></H2User>

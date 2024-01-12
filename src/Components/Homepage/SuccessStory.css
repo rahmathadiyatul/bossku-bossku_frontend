@@ -62,6 +62,13 @@
     padding-left: .8em;
 }
 
+.upper .button:hover {
+    background: maroon;
+    box-shadow: 0px 30px 60px 0px rgba(255, 116, 104, 0.5);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
 .button-text {
     color: var(--old-color-styles-white, #FFF);
     font-family: Poppins;

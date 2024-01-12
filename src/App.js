@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useContext, createContext } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import LandingPage from './2_LandingPage/LandingPage.js';
 import AboutUs from './Components/AboutUs/AboutUs.js';
@@ -10,38 +10,39 @@ import Register from './Components/Register/Register.js';
 import SuccessEmail from './Components/SuccesEmail/SuccesEmail.js';
 import Projects from './Components/Projects/Projects.js';
 import ContactUs from './Components/ContactUs/ContactUs.js';
-import DetailProject from './Components/Projects/ProjectDetails/ProjectDetails.js'
-import { AuthProvider } from './Components/UserPageComponents/AuthContext.js'
-import TokenContextProvider from './Components/UserPageComponents/TokenContext.js'
+import DetailProject from './Components/Projects/ProjectDetails/ProjectDetails.js';
+import { TokenContext } from './Components/UserPageComponents/TokenContext.js';
 
-export const CartContext = createContext()
-
+export const TokenContextProvider = createContext()
 function App() {
-  const [cart, setCart] = useState([])
+  const { token } = useContext(TokenContext);
+
+  // ProtectedRoute component to check token before rendering
+  const ProtectedRoute = ({ element, ...rest }) => {
+    return token ? element : <Navigate to="/login" />;
+  };
+
   return (
-    <BrowserRouter>
-      <TokenContextProvider>
-        <AuthProvider>
-          <div>
-            <Routes>
-              <Route path="/home" element={<LandingPage></LandingPage>}></Route >
-              <Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
-              <Route path="/login" element={<Login></Login>}></Route>
-              <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
-              <Route path="/projects" element={<Projects></Projects>}></Route>
-              <Route path="/project-detail" element={<DetailProject></DetailProject>}></Route>
-              <Route path="/register" element={<Register></Register>}></Route>
-              <Route path="/successemail" element={<SuccessEmail></SuccessEmail>}></Route>
-              <Route path="/resetpassword/newpass" element={<NewPass></NewPass>}></Route>
-              <Route path="/resetpassword" element={<ResetPassword></ResetPassword>}></Route>
-              {/* <Route path="/:category/:id" element={<DetailKelas cart={cart} setCart={setCart}></DetailKelas>}></Route> */}
-              <Route path="/" element={<Login></Login>}></Route>
-              <Route path="*" element={<Login />} />
-            </Routes>
-          </div>
-        </AuthProvider>
-      </TokenContextProvider>
-    </BrowserRouter>
+    <TokenContextProvider.Provider>
+      <BrowserRouter>
+        <div>
+          <Routes>
+            <Route path="/home" element={<LandingPage />} />
+            <Route path="/about-us" element={<ProtectedRoute element={<AboutUs />} />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/contact-us" element={<ProtectedRoute element={<ContactUs />} />} />
+            <Route path="/projects" element={<ProtectedRoute element={<Projects />} />} />
+            <Route path="/project-detail" element={<ProtectedRoute element={<DetailProject />} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/successemail" element={<ProtectedRoute element={<SuccessEmail />} />} />
+            <Route path="/resetpassword/newpass" element={<ProtectedRoute element={<NewPass />} />} />
+            <Route path="/resetpassword" element={<ProtectedRoute element={<ResetPassword />} />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="*" element={<Navigate to="/login" />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </TokenContextProvider.Provider>
   );
 }
 
