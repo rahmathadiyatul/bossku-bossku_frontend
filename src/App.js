@@ -11,6 +11,7 @@ import SuccessEmail from './Components/SuccesEmail/SuccesEmail.js';
 import Projects from './Components/Projects/Projects.js';
 import ContactUs from './Components/ContactUs/ContactUs.js';
 import DetailProject from './Components/Projects/ProjectDetails/ProjectDetails.js';
+import Dashboard from './Dashboard/Dashboard.js';
 import { TokenContext } from './Components/UserPageComponents/TokenContext.js';
 
 export const TokenContextProvider = createContext()
@@ -37,8 +38,9 @@ function App() {
             <Route path="/successemail" element={<ProtectedRoute element={<SuccessEmail />} />} />
             <Route path="/resetpassword/newpass" element={<ProtectedRoute element={<NewPass />} />} />
             <Route path="/resetpassword" element={<ProtectedRoute element={<ResetPassword />} />} />
+            <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
             <Route path="/" element={<LandingPage />} />
-            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="*" element={<Navigate to="/home" />} />
           </Routes>
         </div>
       </BrowserRouter>
