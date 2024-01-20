@@ -40,7 +40,7 @@ function App() {
             <Route path="/resetpassword" element={<ProtectedRoute element={<ResetPassword />} />} />
             <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
             <Route path="/" element={<LandingPage />} />
-            <Route path="*" element={<Navigate to="/home" />} />
+            <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         </div>
       </BrowserRouter>
